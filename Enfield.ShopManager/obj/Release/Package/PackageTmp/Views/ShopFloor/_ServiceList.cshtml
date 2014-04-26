@@ -1,0 +1,16 @@
+﻿@model List<Enfield.ShopManager.Models.ServiceModel>
+           
+<div id="service-detail" class="invoice-child-detail">
+    <h3>Service Detail</h3>
+    <table>
+        @foreach (var service in Model)
+        {
+            <tr data-id="@service.Id.ToString()">
+                <td><a class="edit" href="#">edit</a></td>
+                <td><a class="delete" href="#">delete</a></td>
+                <td class="description">@service.ServiceTypeDescription</td>
+                <td class="rate">@service.Rate.ToString("C")</td>
+            </tr>
+        }
+    </table>
+</div>

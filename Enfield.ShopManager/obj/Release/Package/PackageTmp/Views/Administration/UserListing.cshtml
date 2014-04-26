@@ -1,0 +1,32 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.UserListingModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "User Listing";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "user-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.UserList, page => Url.Action("UserListing", Model.Filter.GenerateUserAccessRoute(page)), new AdminListRenderOptions())
+    <div class="pager-size">Show @Html.DropDownListFor(m => m.Filter.Size, (SelectList)ViewBag.SizeOptions) at a time</div>
+</div>
+
+@{
+var grid = new WebGrid(Model.UserList, canSort: false, rowsPerPage: Model.Filter.Size);
+}
+<div class="admin-listing">
+    @grid.GetHtml(columns: grid.Columns(
+        grid.Column("Name", "Login Name", format: (item) => Html.ActionLink((string)item.Name, "EditUser", Model.Filter.GenerateUserAccessRouteForEdit((int)item.Id))),
+        grid.Column("FirstName", "First Name"),
+        grid.Column("LastName", "Last Name"),
+        grid.Column("RoleName", "Role"),
+        grid.Column("IsEmployed", "Has Access"),
+        grid.Column("CanLogin", "Can Login")
+    ))
+</div> 
+
+@section Filter {
+    @Html.Partial("_UserFilter", Model.Filter)
+}

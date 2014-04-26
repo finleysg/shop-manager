@@ -1,0 +1,21 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.SecurityLogListingModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Security Log";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "security-log";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.SecurityLog, page => Url.Action("SecurityLog", Model.Filter.GenerateSecurityLogRoute(page)), new AdminListRenderOptions())
+</div>
+
+<div class="admin-listing" style="height: 576px">
+    <p class="no-data">No login attempts found using the current filter</p>
+</div> 
+
+@section Filter {
+    @Html.Partial("_SecurityLogFilter", Model.Filter)
+}

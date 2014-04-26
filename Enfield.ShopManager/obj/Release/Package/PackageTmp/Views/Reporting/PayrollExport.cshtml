@@ -1,0 +1,36 @@
+﻿@model Enfield.ShopManager.Models.PayrollStatementsReport
+@{
+    ViewBag.Title = "Payroll Report";
+    Layout = "~/Views/Shared/_ExportLayout.cshtml";
+}
+
+<table id="data-table">
+    <tr><td class="statement-date" colspan="5">@string.Format("{0} to {1}", Model.StartDate, Model.EndDate)</td></tr>
+    @foreach (var statement in Model.Statements)
+    {
+        <tr><td class="employee-name" colspan="5">@statement.Employee.DisplayName</td></tr>
+        <tr>
+            <th>Date</th>
+            <th>Invoice No</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th class="detail-right">Rate</th>
+        </tr>
+        foreach(var l in statement.Labor) {
+            <tr>
+                <td>@l.LaborDate.ToShortDateString()</td>
+                <td>@l.InvoiceId.ToString()</td>
+                <td>@l.LocationName</td>
+                <td>@l.LaborTypeDescription</td>
+                <td class="detail-right">@l.ActualRate.ToString("C2")</td>
+            </tr>
+        }
+        <tr>
+            <td class="total-row">Count:</td>
+            <td class="total-row">@statement.FormattedCount</td>
+            <td>&nbsp;</td>
+            <td class="total-row">Period total:</td>
+            <td class="detail-right total-row">@statement.FormattedTotal</td>
+        </tr>
+    }
+</table>

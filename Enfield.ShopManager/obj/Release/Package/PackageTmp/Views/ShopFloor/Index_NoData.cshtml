@@ -1,0 +1,24 @@
+﻿@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.ShopFloorModel
+@{
+    Bundles.Reference("~/Scripts/ShopFloor");
+    ViewBag.Title = "Index";
+    ViewBag.Section = "shop-floor";
+    ViewBag.Page = "index";
+}
+
+@using (Html.BeginForm("InvoiceDetail", "ShopFloor", FormMethod.Post, new { @id = "shop-form" }))
+{
+    <div id="shop-invoice">
+        @Html.Partial("_Navigation", Model)
+        <div class="invoice-detail">
+            <p>@Model.NoDataMessage</p>
+        </div>
+    </div>
+}
+@Html.Partial("_Dialogs")
+@Html.Partial("_Urls")
+
+@section Filter {
+    @Html.Partial("_ServiceTabs", Model.Services)
+}

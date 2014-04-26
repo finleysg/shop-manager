@@ -1,0 +1,29 @@
+#ignore thumbnails created by windows
+Thumbs.db
+#ignore visual studio build debris
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspcc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.rdp
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+ReSharper*/
+[Tt]est[Rr]esult*

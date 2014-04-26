@@ -1,0 +1,18 @@
+﻿@model List<Enfield.ShopManager.Models.LaborModel>
+           
+<div id="labor-detail" class="invoice-adminchild-detail">
+    <table>
+        @foreach (var labor in Model)
+        {
+            <tr data-id="@labor.Id.ToString()" data-edit-url="@Url.Action("EditLaborRate")">
+                <td><a class="labor-edit" href="#">edit</a></td>
+                <td class="description">@labor.LaborTypeDescription</td>
+                <td class="employee">@labor.EmployeeName</td>
+                <td class="rate">@labor.ActualRate.ToString("C")</td>
+            </tr>
+        }
+        <tr>
+            <td class="rate total" colspan="4">@Model.Sum(l => l.ActualRate).ToString("C")</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,21 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.InvoiceListingModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Invoice Listing";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "invoice-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.InvoiceList, page => Url.Action("InvoiceListing", Model.Filter.GenerateInvoiceRoute(page)), new AdminListRenderOptions())
+</div>
+
+<div class="admin-listing" style="height: 576px">
+    <p class="no-data">No invoices found using the current filter</p>
+</div> 
+
+@section Filter {
+    @Html.Partial("_InvoiceFilter", Model.Filter)
+}

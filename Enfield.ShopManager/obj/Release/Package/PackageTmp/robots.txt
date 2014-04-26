@@ -1,0 +1,7 @@
+﻿User-agent: *
+Disallow: /*.axd
+Disallow: /accounts
+Disallow: /login
+Disallow: /administration
+Disallow: /reporting
+Disallow: /shopfloor

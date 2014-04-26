@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Castle.Core-log4net</id>
+    <version>3.0.0.4003</version>
+    <title>Castle.Core log4net integration 3.0</title>
+    <authors>Castle Project Contributors</authors>
+    <owners>Castle Project Contributors</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <projectUrl>http://www.castleproject.org/</projectUrl>
+    <iconUrl>http://castleproject.org/images/cp_logo100.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Castle logging services integration with log4net</description>
+    <summary>Castle logging services integration with log4net</summary>
+    <copyright>Copyright 2004-2011 Castle Project - http://www.castleproject.org/</copyright>
+    <tags>castle logging log4net</tags>
+    <dependencies>
+      <dependency id="Castle.Core" version="3.0.0" />
+      <dependency id="log4net" version="[1.2.10]" />
+    </dependencies>
+  </metadata>
+</package>

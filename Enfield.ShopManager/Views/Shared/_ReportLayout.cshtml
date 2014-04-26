@@ -1,0 +1,18 @@
+﻿@using Enfield.ShopManager.Helpers
+@{
+    Bundles.Reference("~/Content/Report");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.CompanyName Report: @ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/print-monitor.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/print-printer.css")" rel="stylesheet" type="text/css" media="print" />
+    @Bundles.RenderStylesheets()
+    @RenderSection("Styles", false)
+</head>
+<body>
+    @Html.JqueryPrintButton()
+    @RenderBody()
+</body>
+</html>

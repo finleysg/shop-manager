@@ -1,0 +1,16 @@
+﻿@model Enfield.ShopManager.Models.AccountDetailModel
+@using Enfield.ShopManager.Helpers;
+           
+<div id="contact-detail" class="account-child-detail">
+    <table>
+        @foreach (var contact in Model.Account.ContactList)
+        {
+            <tr>
+                <td><a class="contact-edit" href="@Url.Action("EditContact", Model.Filter.GenerateContactDetailRoute(contact))">edit</a></td>
+                <td>@string.Format("{0} {1}", contact.FirstName, contact.LastName)</td>
+                <td>@contact.ContactDetail</td>
+                <td>@contact.ContactTypeDescription</td>
+            </tr>
+        }
+    </table>
+</div>

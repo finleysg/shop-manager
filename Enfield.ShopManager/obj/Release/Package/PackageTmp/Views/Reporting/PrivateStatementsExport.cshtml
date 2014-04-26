@@ -1,0 +1,37 @@
+﻿@model Enfield.ShopManager.Models.DealerStatementsReport
+@{
+    ViewBag.Title = "Private Statements";
+    Layout = "~/Views/Shared/_ExportLayout.cshtml";
+}
+
+    <table id="data-table">
+@foreach (var statement in Model.Statements)
+{
+        <tr><td colspan="6" class="account">@statement.Account.Name</td></tr>
+        <tr>
+            <th>Date</th>
+            <th>Invoice No</th>
+            <th>Stock No</th>
+            <th>PO No</th>
+            <th>Vehicle</th>
+            <th class="detail-right">Amount Due</th>
+        </tr>
+        foreach(Enfield.ShopManager.Models.InvoiceViewModel i in statement.Invoices) {
+            <tr>
+                <td>@i.ReceiveDate.ToShortDateString()</td>
+                <td>@i.Id.ToString()</td>
+                <td>@i.StockNumber</td>
+                <td>@i.PurchaseOrderNumber</td>
+                <td>@i.FormattedVehicleDescription</td>
+                <td class="detail-right">@i.FormattedTotal</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="3" class="report-detail-foot">Total vehicles with balance due:</td>
+            <td class="report-detail-foot">@statement.Invoices.Count().ToString()</td>
+            <td class="detail-right report-detail-foot"><b>Amount due:</b></td>
+            <td class="detail-right report-detail-foot"><b>@statement.FormattedTotal</b></td>
+        </tr>
+        <tr><td colspan="6">&nbsp;</td></tr>
+}
+    </table>

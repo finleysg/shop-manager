@@ -1,0 +1,17 @@
+﻿@model List<Enfield.ShopManager.Models.AccountTypeServiceModel>
+
+<ul>
+    @foreach (var service in Model)
+    {
+        <li class="account-type-service" 
+            data-id="@service.Id.ToString()" 
+            data-type-id="@service.ServiceTypeId.ToString()"
+            data-parent-id="@service.Parent.Id.ToString()"
+            data-add-labor-url="@Url.Action("AddLaborToAccountType")"
+            data-edit-url="@Url.Action("UpdateServiceType")"
+            data-remove-url="@Url.Action("RemoveServiceFromAccountType")">@service.ServiceTypeDescription</li>
+        <li class="account-type-labor-list">
+            @Html.Partial("_AccountTypeLabor", service.Labor)
+        </li>
+    }
+</ul>

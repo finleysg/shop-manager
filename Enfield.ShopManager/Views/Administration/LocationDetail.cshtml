@@ -1,0 +1,46 @@
+﻿@model Enfield.ShopManager.Models.LocationModel
+@using Enfield.ShopManager.Helpers;
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Location Detail";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "location-detail";
+}
+
+<div style="height: 576px;">
+@using (Html.BeginForm((string)ViewBag.Action, "Administration", FormMethod.Post, new { @id = "location-form" }))
+{
+    <fieldset id="location-detail">
+        <p>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+            @Html.HiddenFor(m => m.Id)
+            @Html.Hidden("OriginalName", Model.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.StaticIpAddress)
+            @Html.TextBoxFor(m => m.StaticIpAddress)
+            @Html.ValidationMessageFor(m => m.StaticIpAddress)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.DefaultAccountName)
+            @Html.TextBoxFor(m => m.DefaultAccountName, new { @size = 30 })
+            @Html.ValidationMessageFor(m => m.DefaultAccountName)
+            @Html.HiddenFor(m => m.DefaultAccountId)
+        </p>
+    </fieldset>
+    <p> 							
+        @Html.JqueryCancelButton("LocationListing", "Administration", null)
+        @Html.JquerySubmitButton("Save", "disk")
+	</p>
+    @Html.ValidationSummary(true)
+}
+</div>
+
+@section Filter {
+    <h3>Adding/Editing Locations</h3>
+    <p>The location name has to be unique.</p>
+    <p>The IP Address lets you limit employee logins to a single, static IP address. If you don't have a static IP address, any employee with a password can log in from anywhere.</p>
+    <p>The default account will be used for all new invoices. You can still select a different account, but this setting makes it easier to create new invoices when a location is serving only one dealer.</p>
+}

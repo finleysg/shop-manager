@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Enfield's Detail";
+    Layout = "~/Views/Shared/_PublicLayout.cshtml";
+}
+
+@section MetaData {
+    <meta property="og:title" content="EnfieldsDetail" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.enfieldsdetail.com/" />
+    <meta property="og:image" content="http://localhost/EnfieldsDetail/Content/images/gallery/enfields-44.jpg" />
+    <meta property="og:site_name" content="Enfield&#039;s Detail" />
+    <meta property="og:description" content="Home page for Enfield's Detail and Auto Reconditioning. Make your car look like new again!" />
+}
+
+@section BeautyShot {
+    <img class="beauty-shot-image" alt="Enfield's Detail Main Shop" src="@Url.Content("~/Content/images/411.jpg")" />
+}
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+</script>
+<div>
+    <h1>Protect Your Investment</h1>
+    <p>Your vechicle is an important investment; an investment that requires regular maintenance and care in order to hold its value. Regular detailing helps to protect and enhance your investment, not to mention making your car feel like new again. And who doesn't love that new car feel?</p>
+    <p>For 25 years, Enfield's Detail has maintained the highest standards for car care in the industry, and we have earned a reputation for excellence.</p>
+</div>
+<div class="fb-like" data-href="http://www.enfieldsdetail.com/" data-send="true" data-width="600" data-show-faces="true" data-colorscheme="dark" data-font="lucida grande"></div>

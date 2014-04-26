@@ -1,0 +1,32 @@
+﻿@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.AccountDetailModel
+@{
+    Bundles.Reference("~/Scripts/Accounts");
+    ViewBag.Title = "Account Detail";
+    ViewBag.Section = "accounts";
+    ViewBag.Page = "account-detail";
+}
+
+<div  class="shop-form">
+@using (Html.BeginForm(Model.Action, "Accounts", FormMethod.Post, new { @id = "account-form" }))
+{
+    <div>
+        @Html.Partial("_AccountDetail", Model.Account)
+        @Html.Partial("_ContactList", Model)
+    </div>
+    <br class="clear" />
+    <p> 							
+        @Html.JqueryCancelButton("AccountListing", "Accounts", Model.Filter.GenerateAccountListingRoute())
+        @Html.JquerySubmitButton("Save", "disk")
+        @Html.JqueryUiButton("Add New Contact", "person", "NewContact", "Accounts", new RouteValueDictionary() {{ "id", Model.Account.Id.ToString() }})
+	</p>
+    @Html.ValidationSummary(true)
+    @Html.Partial("_AccountFilterHidden", Model.Filter)
+}
+</div>
+    
+@section Filter {
+    <h3>Adding/Editing Accounts</h3>
+    <p>The account number is created by the system. It is unique for each account, which makes it possible to have two or more accounts with the same name.</p>
+    <p>You cannot change the account number.</p>
+}

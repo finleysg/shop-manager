@@ -1,0 +1,48 @@
+﻿@model Enfield.ShopManager.Models.AccountModel
+
+<div class="account-detail">
+    <fieldset>
+        <p>
+            @Html.LabelFor(m => m.AccountNumber)
+            @Html.EditorFor(m => m.AccountNumber)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @size = 30 })
+            @Html.ValidationMessageFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.AccountTypeId)
+            @Html.DropDownListFor(m => m.AccountTypeId, (List<SelectListItem>)ViewBag.AccountTypes)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.AddressLine1)
+            @Html.TextBoxFor(m => m.AddressLine1, new { @size = 30 })
+            @Html.ValidationMessageFor(m => m.AddressLine1)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.AddressLine2)
+            @Html.TextBoxFor(m => m.AddressLine2, new { @size = 30 })
+            @Html.ValidationMessageFor(m => m.AddressLine2)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.City)
+            @Html.TextBoxFor(m => m.City)
+            @Html.ValidationMessageFor(m => m.City)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.StateCode)
+            @Html.DropDownListFor(m => m.StateCode, (SelectList)ViewBag.StateCodes)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.PostalCode)
+            @Html.TextBoxFor(m => m.PostalCode)
+            @Html.ValidationMessageFor(m => m.PostalCode)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Notes)
+            @Html.TextAreaFor(m => m.Notes, 4, 24, null)
+            @Html.ValidationMessageFor(m => m.Notes)
+        </p>
+    </fieldset>
+</div>

@@ -1,0 +1,71 @@
+﻿@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.NewInvoiceModel
+@{
+    Bundles.Reference("~/Scripts/ShopFloor");
+    ViewBag.Title = "New Vehicle";
+    ViewBag.Section = "shop-floor";
+    ViewBag.Page = "new-vehicle";
+}
+
+@using (Html.BeginForm("NewVehicle", "ShopFloor", FormMethod.Post, new { @id = "new-vehicle-form" }))
+{
+    <div id="shop-invoice" class="shop-form">
+        <div class="invoice-detail">
+            <fieldset>
+                <p>
+                    @Html.LabelFor(m => m.AccountName)
+                    @Html.TextBoxFor(m => m.AccountName, new { @size = 30 })
+                    @Html.ValidationMessageFor(m => m.AccountName)
+                    @Html.HiddenFor(m => m.AccountId)
+                    @Html.HiddenFor(m => m.AccountTypeId)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.StockNumber)
+                    @Html.TextBoxFor(m => m.StockNumber)
+                    @Html.ValidationMessageFor(m => m.StockNumber)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Year)
+                    @Html.TextBoxFor(m => m.Year)
+                    @Html.ValidationMessageFor(m => m.Year)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Make)
+                    @Html.TextBoxFor(m => m.Make)
+                    @Html.ValidationMessageFor(m => m.Make)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Model)
+                    @Html.TextBoxFor(m => m.Model)
+                    @Html.ValidationMessageFor(m => m.Model)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Color)
+                    @Html.TextBoxFor(m => m.Color)
+                    @Html.ValidationMessageFor(m => m.Color)
+                </p>
+            </fieldset>
+            <p> 							
+                @Html.JqueryCancelButton("Index", "ShopFloor", null)
+                @Html.JquerySubmitButton("Save", "disk")
+	        </p>
+            @Html.ValidationSummary(true)
+        </div>
+    </div>
+}
+<div id="account-type-dialog" class="dialog">
+    <span>The account you entered will be created as a new account. Select an account type.</span>
+    <fieldset>
+        <p>
+            <label for="account-type-id">Account type:</label>
+            @Html.DropDownList("account-type-id", (List<SelectListItem>)ViewBag.AccountTypes)
+        </p>
+    </fieldset>
+</div>
+
+@section Filter {
+    <h3>Adding a New Invoice</h3>
+    <p>The new invoice number will be created when the invoice is saved.</p>
+    <p>Enter the first 8 digits in the VIN for the stock number.</p>
+    <p>We need a stock number in order to track history. If there is no stock number, then notes/history will be disabled.</p>
+}

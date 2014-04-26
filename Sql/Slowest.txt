@@ -1,0 +1,8 @@
+SELECT cs-uri-stem AS Url
+	  ,MIN(time-taken) AS [Min]
+	  ,AVG(time-taken) AS [Avg]
+	  ,MAX(time-taken) AS [Max]
+	  ,COUNT(time-taken) AS Hits
+FROM u_ex*.log
+GROUP BY Url
+ORDER BY [Max] DESC

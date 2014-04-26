@@ -1,0 +1,5 @@
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.dll
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.pdb
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Release\Enfield.ShopManager.Styles.dll
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Release\Enfield.ShopManager.Styles.pdb

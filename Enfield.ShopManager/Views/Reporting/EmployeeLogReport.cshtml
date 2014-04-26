@@ -1,0 +1,44 @@
+﻿@model Enfield.ShopManager.Models.EmployeeLogReport
+@{
+    ViewBag.Title = "Employee Log";
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
+
+<div>
+    @Html.Partial("_ReportHeader", Model.Header)
+    <div class="report-body">
+        <div class="statement-date">
+            <p>Includes all working days from @Model.StartDate to @Model.EndDate</p>
+        </div>
+        <div class="report-detail">
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Name</th>
+                    <th class="detail-right">Sign In</th>
+                    <th class="detail-right">Sign Out</th>
+                    <th class="detail-right">Hours</th>
+                </tr>
+                @foreach (var day in Model.Employees)
+                {
+                    <tr>
+                        <td colspan="2">&nbsp</td>
+                        <td colspan="2" class="detail-right"><b>@day.WorkDate</b></td>
+                        <td>&nbsp</td>
+                    </tr>
+                    foreach (var e in day.EmployeeList)
+                    {
+                    <tr>
+                        <td>@e.LocationName</td>
+                        <td>@e.DisplayName</td>
+                        <td class="detail-right">@e.FormattedSignInDate</td>
+                        <td class="detail-right">@e.FormattedSignOutDate</td>
+                        <td class="detail-right">@e.Hours</td>
+                    </tr>
+                    }
+                    <tr><td colspan="5">&nbsp</td></tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

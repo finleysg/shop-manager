@@ -1,0 +1,18 @@
+﻿@using Enfield.ShopManager.Helpers;
+@{
+    ViewBag.Title = "Error";
+}
+
+<div id="error-notice">
+    <h2>Doh!</h2>
+    <p>An error occurred at the server while processing your request. I have it logged and an email has been sent to let me know.</p>
+    <p>Click <a id="show-error" href="#" >here</a> if you have the stomach for the gory details.</p>
+</div>
+<div id="error-stack">
+    <pre></pre>
+</div>
+
+@section Filter {
+    <div id="error-filter">
+    </div>
+}

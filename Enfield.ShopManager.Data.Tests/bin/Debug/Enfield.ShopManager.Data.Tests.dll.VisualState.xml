@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1057]C:\Projects\ShopManager\Enfield.ShopManager.Data.Tests\bin\Debug\Enfield.ShopManager.Data.Tests.dll</TopNode>
+  <SelectedNode>[0-1059]Enfield.ShopManager</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1057]C:\Projects\ShopManager\Enfield.ShopManager.Data.Tests\bin\Debug\Enfield.ShopManager.Data.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1058]Enfield" Expanded="true" />
+    <Node UniqueName="[0-1059]Enfield.ShopManager" Expanded="true" />
+    <Node UniqueName="[0-1060]Enfield.ShopManager.Data" Expanded="true" />
+    <Node UniqueName="[0-1061]Enfield.ShopManager.Data.Tests" Expanded="true" />
+    <Node UniqueName="[0-1038]Enfield.ShopManager.Data.Tests.Mapping.WindsorContainerSetup" Expanded="true" />
+    <Node UniqueName="[0-1021]Enfield.ShopManager.Data.Tests.Mapping.EqualityTests" Expanded="true" />
+    <Node UniqueName="[0-1013]Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest" Expanded="true" />
+    <Node UniqueName="[0-1011]Enfield.ShopManager.Data.Tests.Mapping.LogTest" Expanded="true" />
+    <Node UniqueName="[0-1000]Enfield.ShopManager.Data.Tests.Mapping.LookupTest" Expanded="true" />
+    <Node UniqueName="[0-1031]Enfield.ShopManager.Data.Tests.Repositories.WindsorContainerSetup" Expanded="true" />
+    <Node UniqueName="[0-1052]Enfield.ShopManager.Data.Tests.Repositories.SecurityRepositoryTests" Expanded="true" />
+  </Nodes>
+</VisualState>

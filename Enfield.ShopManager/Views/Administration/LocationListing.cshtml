@@ -1,0 +1,30 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model List<Enfield.ShopManager.Models.LocationModel>
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Location Listing";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "location-listing";
+}
+
+<div class="pager-header">
+@*    @Html.PagedListPager(Model.LocationList, page => Url.Action("LocationList", Model.Filter.GenerateUserAccessRoute(page)), new AdminListRenderOptions())
+    <div class="pager-size">Show @Html.DropDownListFor(m => m.Filter.Size, (SelectList)ViewBag.SizeOptions) at a time</div>
+*@
+</div>
+
+@{
+    var grid = new WebGrid(Model, canSort: false, rowsPerPage: 50);
+}
+<div class="admin-listing" style="height: 576px">
+    @grid.GetHtml(columns: grid.Columns(
+        grid.Column("Name", "Location Name", format: (item) => Html.ActionLink((string)item.Name, "EditLocation", new { id = item.id })),
+        grid.Column("StaticIpAddress", "IP Address Enforced"),
+        grid.Column("DefaultAccountName", "Account Name")
+    ))
+</div> 
+
+@section Filter {
+    @Html.Partial("_LocationFilter")
+}

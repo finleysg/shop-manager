@@ -1,0 +1,22 @@
+﻿@model Enfield.ShopManager.Models.UserFilterModel
+@using Enfield.ShopManager.Helpers
+
+@using (Html.BeginForm("UserListing", "Administration", FormMethod.Get, new { @id = "filter-form" }))
+{
+    <fieldset>
+        @Html.LabelFor(m => m.HasSiteAccess)
+        @Html.DropDownListFor(m => m.HasSiteAccess, (SelectList)ViewBag.SiteAccessOptions)
+        @Html.LabelFor(m => m.Role)
+        @Html.DropDownListFor(m => m.Role, (SelectList)ViewBag.RoleOptions)
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @size = 30 })
+        @Html.HiddenFor(m => m.Page)
+        @Html.HiddenFor(m => m.Size)
+    </fieldset>
+    <p>
+        @Html.JquerySubmitButton("Apply Filter", "check")
+    </p>
+    <p>
+        @Html.JqueryNewButton("Create New User", "person", "NewUser", "Administration", Model.GenerateUserAccessRoute())
+    </p>
+}

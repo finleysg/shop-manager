@@ -1,0 +1,30 @@
+﻿@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.ContactDetailModel
+@{
+    Bundles.Reference("~/Scripts/Accounts");
+    ViewBag.Title = "Contact Detail";
+    ViewBag.Section = "accounts";
+    ViewBag.Page = "contact-detail";
+}
+
+<div style="height: 576px;">
+@using (Html.BeginForm(Model.Action, "Accounts", FormMethod.Post, new { @id = "contact-form" }))
+{
+    <div id="account-admin">
+        @Html.Partial("_ContactDetail", Model.Contact)
+    </div>
+    <br class="clear" />
+    <p> 							
+        @Html.JqueryCancelButton("EditAccount", "Accounts", Model.Filter.GenerateAccountDetailRoute(Model.Contact.AccountId))
+        @Html.JquerySubmitButton("Save", "disk")
+	</p>
+    @Html.ValidationSummary(true)
+    @Html.Partial("_AccountFilterHidden", Model.Filter)
+}
+</div>
+
+@section Filter {
+    <h3>Adding/Editing Contacts</h3>
+    <p>A contact type and contact info is required.</p>
+    <p>First and/or last name are optional.</p>
+}

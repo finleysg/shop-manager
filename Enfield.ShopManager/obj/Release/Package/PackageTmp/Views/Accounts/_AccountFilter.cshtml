@@ -1,0 +1,20 @@
+﻿@model Enfield.ShopManager.Models.AccountFilterModel
+@using Enfield.ShopManager.Helpers
+
+@using (Html.BeginForm("AccountListing", "Accounts", FormMethod.Get, new { @id = "filter-form" }))
+{
+    <fieldset>
+        @Html.LabelFor(m => m.AccountTypeId)
+        @Html.DropDownListFor(m => m.AccountTypeId, (List<SelectListItem>)ViewBag.AccountTypeOptions)
+        @Html.LabelFor(m => m.AccountName)
+        @Html.TextBoxFor(m => m.AccountName, new { @size = 30 })
+        @Html.HiddenFor(m => m.Page)
+        @Html.HiddenFor(m => m.Size)
+    </fieldset>
+    <p>
+        @Html.JquerySubmitButton("Apply Filter", "check")
+    </p>
+    <p>
+        @Html.JqueryNewButton("Create New Account", "person", "NewAccount", "Accounts", Model.GenerateAccountListingRoute())
+    </p>
+}

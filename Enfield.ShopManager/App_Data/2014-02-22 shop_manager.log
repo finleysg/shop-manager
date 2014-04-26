@@ -1,0 +1,28 @@
+2014-02-22 15:23:23,456 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Authentication failed: No auth cookie in request
+2014-02-22 15:23:39,036 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:23:39,098 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-02-22 15:23:39,139 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:23:39,149 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-02-22 15:23:39,298 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-02-22 15:23:42,973 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:23:43,001 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:23:43,040 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:23:46,489 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:23:48,813 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:23:48,900 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:24:07,302 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:24:09,111 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:24:09,194 INFO  Enfield.ShopManager.Controllers.ReportingController: Local development - not using a secure cookie
+2014-02-22 15:24:29,543 INFO  Enfield.ShopManager.Controllers.AccountsController: Local development - not using a secure cookie
+2014-02-22 15:24:29,757 INFO  Enfield.ShopManager.Controllers.AccountsController: Local development - not using a secure cookie
+2014-02-22 15:26:37,784 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:26:37,820 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-02-22 15:26:37,863 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:26:37,878 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-02-22 15:26:37,926 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-02-22 15:33:25,009 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Authentication failed: Token is invalid for 0|Employee|0 from ::1
+2014-02-22 15:33:39,735 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:33:39,751 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-02-22 15:33:39,783 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-02-22 15:33:39,792 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-02-22 15:33:39,921 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie

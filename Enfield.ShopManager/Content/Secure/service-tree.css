@@ -1,0 +1,5 @@
+﻿.service-and-labor-tree { margin-left: 20px; height: 600px; overflow: auto; }
+.account-type { margin-top: 20px; margin-bottom: 4px; font-size: 1.4em; font-weight: bold; }
+.account-type-service { margin-left: 20px; margin-top: 8px; margin-bottom: 2px; font-size: 1.2em; }
+.account-type-labor { margin-left: 36px;  margin-bottom: 4px; font-size: 1em; font-style: italic; }
+li.account-type-labor { list-style-type: circle; }

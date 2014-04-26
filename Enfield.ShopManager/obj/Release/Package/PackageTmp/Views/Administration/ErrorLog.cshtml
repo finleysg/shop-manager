@@ -1,0 +1,26 @@
+﻿@model Enfield.ShopManager.Models.ErrorLogModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Error Logs";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "error-log";
+}
+
+<div class="log-view">
+    @foreach (var line in Model.SelectedLog)
+    {
+        <p class="log-entry">@line</p>
+    }
+</div>
+
+@section Filter {
+<div class="log-files">
+    <p><a href="../elmah.axd" target="_blank">Elmah Log Page</a></p>
+    <ul class="log-file-list">
+    @foreach (var file in Model.LogFiles)
+    {
+        <li>@Html.ActionLink(file, "ErrorLog", new { log = file })</li>
+    }
+    </ul>
+</div>
+}

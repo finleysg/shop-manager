@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Working</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxMin.dll">
+      <publishTime>03/30/2012 14:47:42</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>01/20/2012 17:14:31</publishTime>
+    </File>
+    <File Include="bin/Cassette.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Cassette.Views.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Cassette.Web.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Castle.Facilities.Logging.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Castle.Services.Logging.Log4netIntegration.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Castle.Windsor.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Elmah.dll">
+      <publishTime>12/23/2011 00:16:42</publishTime>
+    </File>
+    <File Include="bin/Enfield.ShopManager.Data.dll">
+      <publishTime>02/22/2014 15:39:29</publishTime>
+    </File>
+    <File Include="bin/Enfield.ShopManager.dll">
+      <publishTime>02/22/2014 15:41:30</publishTime>
+    </File>
+    <File Include="bin/FluentNHibernate.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/IronRuby.dll">
+      <publishTime>03/30/2012 14:47:43</publishTime>
+    </File>
+    <File Include="bin/IronRuby.Libraries.dll">
+      <publishTime>03/30/2012 14:47:43</publishTime>
+    </File>
+    <File Include="bin/IronRuby.Libraries.Yaml.dll">
+      <publishTime>03/30/2012 14:47:43</publishTime>
+    </File>
+    <File Include="bin/Jurassic.dll">
+      <publishTime>03/30/2012 14:47:42</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Dynamic.dll">
+      <publishTime>03/30/2012 14:47:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>03/30/2012 14:47:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Scripting.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Scripting.Metadata.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/30/2012 14:47:42</publishTime>
+    </File>
+    <File Include="bin/NHibernate.ByteCode.Castle.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>01/20/2012 17:14:49</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>11/25/2012 11:55:15</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>01/20/2012 17:09:45</publishTime>
+    </File>
+    <File Include="bin/Pandora.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/SassAndCoffee.Core.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/SassAndCoffee.Ruby.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>03/30/2012 14:47:44</publishTime>
+    </File>
+    <File Include="Content/images/411.jpg">
+      <publishTime>04/15/2012 13:47:21</publishTime>
+    </File>
+    <File Include="Content/images/bg.gif">
+      <publishTime>04/15/2012 14:21:20</publishTime>
+    </File>
+    <File Include="Content/images/d.gif">
+      <publishTime>06/05/2010 21:35:52</publishTime>
+    </File>
+    <File Include="Content/images/d.png">
+      <publishTime>06/03/2010 16:41:42</publishTime>
+    </File>
+    <File Include="Content/images/enfields-11.jpg">
+      <publishTime>04/17/2012 19:24:44</publishTime>
+    </File>
+    <File Include="Content/images/enfields-22.jpg">
+      <publishTime>04/17/2012 19:25:02</publishTime>
+    </File>
+    <File Include="Content/images/enfields-68.jpg">
+      <publishTime>04/17/2012 19:25:10</publishTime>
+    </File>
+    <File Include="Content/images/enfields-81.jpg">
+      <publishTime>04/17/2012 19:25:14</publishTime>
+    </File>
+    <File Include="Content/images/facebook_32.png">
+      <publishTime>04/28/2012 13:02:20</publishTime>
+    </File>
+    <File Include="Content/images/fancy_close.png">
+      <publishTime>02/02/2010 12:27:14</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-33.jpg">
+      <publishTime>04/17/2012 19:05:06</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-34.jpg">
+      <publishTime>04/17/2012 19:05:14</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-35.jpg">
+      <publishTime>04/17/2012 19:05:22</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-36.jpg">
+      <publishTime>04/17/2012 19:05:28</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-37.jpg">
+      <publishTime>04/17/2012 19:05:38</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-38.jpg">
+      <publishTime>04/17/2012 19:05:42</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-39.jpg">
+      <publishTime>04/17/2012 19:05:46</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-40.jpg">
+      <publishTime>04/17/2012 19:05:50</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-41.jpg">
+      <publishTime>04/17/2012 19:05:54</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-42.jpg">
+      <publishTime>04/17/2012 19:05:58</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-43.jpg">
+      <publishTime>04/17/2012 19:06:02</publishTime>
+    </File>
+    <File Include="Content/images/gallery/enfields-44.jpg">
+      <publishTime>04/17/2012 19:06:06</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery1.jpg">
+      <publishTime>04/18/2012 19:15:48</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery10.jpg">
+      <publishTime>04/18/2012 19:20:26</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery11.jpg">
+      <publishTime>04/18/2012 19:20:44</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery12.jpg">
+      <publishTime>04/18/2012 19:21:02</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery13.jpg">
+      <publishTime>04/18/2012 19:21:22</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery2.jpg">
+      <publishTime>04/18/2012 19:17:00</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery3.jpg">
+      <publishTime>04/18/2012 19:17:30</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery4.jpg">
+      <publishTime>04/18/2012 19:17:58</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery5.jpg">
+      <publishTime>04/18/2012 19:18:28</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery6.jpg">
+      <publishTime>04/18/2012 19:18:54</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery7.jpg">
+      <publishTime>04/18/2012 19:19:20</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery8.jpg">
+      <publishTime>04/18/2012 19:19:48</publishTime>
+    </File>
+    <File Include="Content/images/gallery/gallery9.jpg">
+      <publishTime>04/18/2012 19:20:06</publishTime>
+    </File>
+    <File Include="Content/images/TempBeautyShot.gif">
+      <publishTime>04/09/2012 10:50:29</publishTime>
+    </File>
+    <File Include="Content/images/throbber.gif">
+      <publishTime>06/03/2010 16:41:42</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_diagonals-thick_75_f3d8d8_40x40.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_dots-small_65_a6a6a6_2x2.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_flat_0_333333_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_flat_65_ffffff_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_glass_55_fbf8ee_1x400.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_highlight-hard_100_eeeeee_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_highlight-hard_100_f6f6f6_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-bg_highlight-soft_15_cc0000_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_004276_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_cc0000_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_ffffff_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/log-override.css">
+      <publishTime>04/08/2012 19:55:12</publishTime>
+    </File>
+    <File Include="Content/print-monitor.css">
+      <publishTime>04/08/2012 19:11:10</publishTime>
+    </File>
+    <File Include="Content/print-printer.css">
+      <publishTime>04/08/2012 19:11:47</publishTime>
+    </File>
+    <File Include="Content/Public/fancybox.png">
+      <publishTime>03/05/2010 01:09:30</publishTime>
+    </File>
+    <File Include="Content/Public/jquery.fancybox-1.3.4.css">
+      <publishTime>11/11/2010 22:38:40</publishTime>
+    </File>
+    <File Include="Content/Public/main.css">
+      <publishTime>04/28/2012 13:09:00</publishTime>
+    </File>
+    <File Include="Content/Report/report.css">
+      <publishTime>04/08/2012 20:04:59</publishTime>
+    </File>
+    <File Include="Content/Secure/base.css">
+      <publishTime>03/17/2013 16:22:54</publishTime>
+    </File>
+    <File Include="Content/Secure/error-logs.css">
+      <publishTime>04/15/2012 11:04:47</publishTime>
+    </File>
+    <File Include="Content/Secure/images/cut.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/images/door.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/images/page_white_copy.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/images/page_white_delete.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/images/page_white_edit.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/images/page_white_paste.png">
+      <publishTime>03/10/2012 00:25:14</publishTime>
+    </File>
+    <File Include="Content/Secure/jquery.contextMenu.css">
+      <publishTime>04/12/2012 20:16:52</publishTime>
+    </File>
+    <File Include="Content/Secure/PagedList.css">
+      <publishTime>04/02/2012 20:28:41</publishTime>
+    </File>
+    <File Include="Content/Secure/reset.css">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/Secure/service-tree.css">
+      <publishTime>04/01/2012 20:00:49</publishTime>
+    </File>
+    <File Include="Content/Secure/shop.css">
+      <publishTime>11/09/2013 10:51:38</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_diagonals-thick_75_f3d8d8_40x40.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_dots-small_65_a6a6a6_2x2.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_flat_0_333333_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_flat_65_ffffff_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_glass_55_fbf8ee_1x400.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_highlight-hard_100_eeeeee_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_highlight-hard_100_f6f6f6_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-bg_highlight-soft_15_cc0000_1x100.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-icons_004276_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-icons_cc0000_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/images/ui-icons_ffffff_256x240.png">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Content/themes/blitzer/jquery-ui-1.8.17.custom.css">
+      <publishTime>04/12/2012 20:45:24</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>04/09/2012 13:11:07</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/25/2012 11:55:18</publishTime>
+    </File>
+    <File Include="robots.txt">
+      <publishTime>04/13/2012 09:07:12</publishTime>
+    </File>
+    <File Include="Scripts/Accounts/accounts.js">
+      <publishTime>04/09/2012 07:40:48</publishTime>
+    </File>
+    <File Include="Scripts/Administration/administration-ajax.js">
+      <publishTime>11/25/2012 13:23:50</publishTime>
+    </File>
+    <File Include="Scripts/Administration/administration-dialogs.js">
+      <publishTime>04/12/2012 20:25:27</publishTime>
+    </File>
+    <File Include="Scripts/Administration/administration.js">
+      <publishTime>11/25/2012 13:26:37</publishTime>
+    </File>
+    <File Include="Scripts/Administration/jquery.contextMenu.js">
+      <publishTime>03/31/2012 15:24:22</publishTime>
+    </File>
+    <File Include="Scripts/Common/jquery.livequery.js">
+      <publishTime>02/12/2010 16:22:56</publishTime>
+    </File>
+    <File Include="Scripts/Common/jquery.validate.js">
+      <publishTime>03/31/2012 15:22:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/jquery.validate.unobtrusive.js">
+      <publishTime>03/31/2012 15:22:55</publishTime>
+    </File>
+    <File Include="Scripts/Common/shop.js">
+      <publishTime>04/14/2012 14:28:10</publishTime>
+    </File>
+    <File Include="Scripts/jQuery/bundle.txt">
+      <publishTime>03/31/2012 14:54:12</publishTime>
+    </File>
+    <File Include="Scripts/jQuery/jquery.js">
+      <publishTime>03/31/2012 14:44:23</publishTime>
+    </File>
+    <File Include="Scripts/jQueryUi/bundle.txt">
+      <publishTime>03/31/2012 15:26:35</publishTime>
+    </File>
+    <File Include="Scripts/jQueryUi/jquery-ui.js">
+      <publishTime>03/31/2012 15:22:06</publishTime>
+    </File>
+    <File Include="Scripts/Public/jquery.fancybox-1.3.4.js">
+      <publishTime>11/11/2010 22:31:54</publishTime>
+    </File>
+    <File Include="Scripts/Public/socialite.js">
+      <publishTime>04/28/2012 11:40:59</publishTime>
+    </File>
+    <File Include="Scripts/Reporting/reporting.js">
+      <publishTime>08/11/2012 16:24:23</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/jquery.cookie.js">
+      <publishTime>03/31/2012 15:24:42</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/shop-floor-ajax.js">
+      <publishTime>11/09/2013 11:56:45</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/shop-floor-dialogs.js">
+      <publishTime>11/09/2013 11:32:19</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/shop-floor-drag-n-drop.js">
+      <publishTime>11/09/2013 10:51:53</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/shop-floor-new-invoice.js">
+      <publishTime>04/12/2012 20:32:56</publishTime>
+    </File>
+    <File Include="Scripts/ShopFloor/shop-floor.js">
+      <publishTime>11/09/2013 11:12:02</publishTime>
+    </File>
+    <File Include="Views/Accounts/AccountDetail.cshtml">
+      <publishTime>04/09/2012 07:50:09</publishTime>
+    </File>
+    <File Include="Views/Accounts/AccountListing.cshtml">
+      <publishTime>04/06/2012 16:09:03</publishTime>
+    </File>
+    <File Include="Views/Accounts/AccountListingNoData.cshtml">
+      <publishTime>04/06/2012 16:09:03</publishTime>
+    </File>
+    <File Include="Views/Accounts/ContactDetail.cshtml">
+      <publishTime>04/09/2012 07:43:06</publishTime>
+    </File>
+    <File Include="Views/Accounts/_AccountDetail.cshtml">
+      <publishTime>04/09/2012 07:50:23</publishTime>
+    </File>
+    <File Include="Views/Accounts/_AccountFilter.cshtml">
+      <publishTime>03/25/2012 13:16:22</publishTime>
+    </File>
+    <File Include="Views/Accounts/_AccountFilterHidden.cshtml">
+      <publishTime>03/13/2012 19:27:10</publishTime>
+    </File>
+    <File Include="Views/Accounts/_ContactDetail.cshtml">
+      <publishTime>03/25/2012 16:38:05</publishTime>
+    </File>
+    <File Include="Views/Accounts/_ContactList.cshtml">
+      <publishTime>04/09/2012 07:46:14</publishTime>
+    </File>
+    <File Include="Views/Administration/ErrorLog.cshtml">
+      <publishTime>04/15/2012 11:01:54</publishTime>
+    </File>
+    <File Include="Views/Administration/InvoiceDetail.cshtml">
+      <publishTime>04/09/2012 14:08:10</publishTime>
+    </File>
+    <File Include="Views/Administration/InvoiceDetailNoData.cshtml">
+      <publishTime>03/31/2012 10:10:20</publishTime>
+    </File>
+    <File Include="Views/Administration/InvoiceListing.cshtml">
+      <publishTime>11/25/2012 13:10:16</publishTime>
+    </File>
+    <File Include="Views/Administration/InvoiceListingNoData.cshtml">
+      <publishTime>04/12/2012 20:09:12</publishTime>
+    </File>
+    <File Include="Views/Administration/LocationDetail.cshtml">
+      <publishTime>04/08/2012 21:16:52</publishTime>
+    </File>
+    <File Include="Views/Administration/LocationListing.cshtml">
+      <publishTime>04/12/2012 20:13:43</publishTime>
+    </File>
+    <File Include="Views/Administration/SecurityLog.cshtml">
+      <publishTime>04/14/2012 08:26:31</publishTime>
+    </File>
+    <File Include="Views/Administration/SecurityLogNoData.cshtml">
+      <publishTime>04/12/2012 20:17:58</publishTime>
+    </File>
+    <File Include="Views/Administration/ServicesAndLabor.cshtml">
+      <publishTime>04/07/2012 08:09:56</publishTime>
+    </File>
+    <File Include="Views/Administration/UserDetail.cshtml">
+      <publishTime>04/08/2012 21:15:25</publishTime>
+    </File>
+    <File Include="Views/Administration/UserListing.cshtml">
+      <publishTime>04/08/2012 08:17:26</publishTime>
+    </File>
+    <File Include="Views/Administration/UserListingNoData.cshtml">
+      <publishTime>04/12/2012 20:11:58</publishTime>
+    </File>
+    <File Include="Views/Administration/_AccountTypeLabor.cshtml">
+      <publishTime>04/01/2012 11:44:09</publishTime>
+    </File>
+    <File Include="Views/Administration/_AccountTypeService.cshtml">
+      <publishTime>04/01/2012 11:42:41</publishTime>
+    </File>
+    <File Include="Views/Administration/_HistoryList.cshtml">
+      <publishTime>04/09/2012 14:11:11</publishTime>
+    </File>
+    <File Include="Views/Administration/_InvoiceDetail.cshtml">
+      <publishTime>04/09/2012 14:04:10</publishTime>
+    </File>
+    <File Include="Views/Administration/_InvoiceDialogs.cshtml">
+      <publishTime>04/02/2012 20:52:51</publishTime>
+    </File>
+    <File Include="Views/Administration/_InvoiceFilter.cshtml">
+      <publishTime>04/28/2012 11:18:42</publishTime>
+    </File>
+    <File Include="Views/Administration/_LaborList.cshtml">
+      <publishTime>04/09/2012 14:11:11</publishTime>
+    </File>
+    <File Include="Views/Administration/_LocationFilter.cshtml">
+      <publishTime>04/06/2012 10:58:06</publishTime>
+    </File>
+    <File Include="Views/Administration/_SecurityLogFilter.cshtml">
+      <publishTime>02/09/2012 20:13:31</publishTime>
+    </File>
+    <File Include="Views/Administration/_ServiceAndLaborDialogs.cshtml">
+      <publishTime>04/07/2012 07:01:13</publishTime>
+    </File>
+    <File Include="Views/Administration/_ServiceList.cshtml">
+      <publishTime>04/09/2012 14:15:18</publishTime>
+    </File>
+    <File Include="Views/Administration/_UserFilter.cshtml">
+      <publishTime>02/09/2012 10:49:56</publishTime>
+    </File>
+    <File Include="Views/Administration/_UserFilterHidden.cshtml">
+      <publishTime>02/09/2012 11:03:59</publishTime>
+    </File>
+    <File Include="Views/Error/Index.cshtml">
+      <publishTime>11/07/2012 19:20:32</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>04/12/2012 20:07:04</publishTime>
+    </File>
+    <File Include="Views/Public/Contact.cshtml">
+      <publishTime>04/17/2012 19:58:01</publishTime>
+    </File>
+    <File Include="Views/Public/Gallery.cshtml">
+      <publishTime>04/18/2012 19:50:35</publishTime>
+    </File>
+    <File Include="Views/Public/Index.cshtml">
+      <publishTime>04/28/2012 13:14:45</publishTime>
+    </File>
+    <File Include="Views/Public/Services.cshtml">
+      <publishTime>04/17/2012 19:39:30</publishTime>
+    </File>
+    <File Include="Views/Reporting/DailyLog.cshtml">
+      <publishTime>04/07/2012 21:25:49</publishTime>
+    </File>
+    <File Include="Views/Reporting/DailyLogReport.cshtml">
+      <publishTime>04/10/2012 21:06:07</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerStatements.cshtml">
+      <publishTime>03/16/2013 18:02:54</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerStatementsExport.cshtml">
+      <publishTime>03/16/2013 17:37:07</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerStatementsReport.cshtml">
+      <publishTime>04/08/2012 19:02:39</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerTotals.cshtml">
+      <publishTime>03/17/2013 14:57:49</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerTotalsExport.cshtml">
+      <publishTime>03/17/2013 14:48:55</publishTime>
+    </File>
+    <File Include="Views/Reporting/DealerTotalsReport.cshtml">
+      <publishTime>04/08/2012 19:40:32</publishTime>
+    </File>
+    <File Include="Views/Reporting/EmployeeLog.cshtml">
+      <publishTime>12/01/2013 10:47:58</publishTime>
+    </File>
+    <File Include="Views/Reporting/EmployeeLogExport.cshtml">
+      <publishTime>12/01/2013 11:25:13</publishTime>
+    </File>
+    <File Include="Views/Reporting/EmployeeLogReport.cshtml">
+      <publishTime>12/01/2013 11:44:18</publishTime>
+    </File>
+    <File Include="Views/Reporting/Invoice.cshtml">
+      <publishTime>04/07/2012 21:26:22</publishTime>
+    </File>
+    <File Include="Views/Reporting/InvoiceReport.cshtml">
+      <publishTime>03/30/2012 19:32:03</publishTime>
+    </File>
+    <File Include="Views/Reporting/Payroll.cshtml">
+      <publishTime>03/17/2013 15:08:30</publishTime>
+    </File>
+    <File Include="Views/Reporting/PayrollExport.cshtml">
+      <publishTime>03/17/2013 15:21:19</publishTime>
+    </File>
+    <File Include="Views/Reporting/PayrollReport.cshtml">
+      <publishTime>04/10/2012 20:36:52</publishTime>
+    </File>
+    <File Include="Views/Reporting/PrivateStatements.cshtml">
+      <publishTime>03/17/2013 15:00:22</publishTime>
+    </File>
+    <File Include="Views/Reporting/PrivateStatementsExport.cshtml">
+      <publishTime>03/17/2013 15:02:48</publishTime>
+    </File>
+    <File Include="Views/Reporting/PrivateStatementsReport.cshtml">
+      <publishTime>08/11/2012 16:41:23</publishTime>
+    </File>
+    <File Include="Views/Reporting/_InvoiceReportHeader.cshtml">
+      <publishTime>02/22/2014 15:14:12</publishTime>
+    </File>
+    <File Include="Views/Reporting/_ReportAccount.cshtml">
+      <publishTime>03/29/2012 18:15:16</publishTime>
+    </File>
+    <File Include="Views/Reporting/_ReportHeader.cshtml">
+      <publishTime>02/22/2014 15:13:36</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/UserModel.cshtml">
+      <publishTime>04/08/2012 08:06:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>11/07/2012 19:37:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_ExportLayout.cshtml">
+      <publishTime>02/22/2014 15:25:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/22/2014 15:20:51</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginLayout.cshtml">
+      <publishTime>02/22/2014 15:26:02</publishTime>
+    </File>
+    <File Include="Views/Shared/_LogOnPartial.cshtml">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuPartial.cshtml">
+      <publishTime>03/10/2012 19:56:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_PublicLayout.cshtml">
+      <publishTime>04/28/2012 13:14:54</publishTime>
+    </File>
+    <File Include="Views/Shared/_ReportLayout.cshtml">
+      <publishTime>02/22/2014 15:25:38</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/Index.cshtml">
+      <publishTime>04/18/2012 18:47:00</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/Index_NoData.cshtml">
+      <publishTime>04/19/2012 14:00:46</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/NewVehicle.cshtml">
+      <publishTime>04/08/2012 20:51:42</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_AvailableEmployees.cshtml">
+      <publishTime>04/08/2012 20:24:42</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_AvailableLaborTypes.cshtml">
+      <publishTime>03/03/2012 19:02:02</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_AvailableServiceTypes.cshtml">
+      <publishTime>03/03/2012 19:00:26</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_Dialogs.cshtml">
+      <publishTime>11/09/2013 11:48:47</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_HistoryList.cshtml">
+      <publishTime>04/12/2012 20:39:57</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_InvoiceDetail.cshtml">
+      <publishTime>04/08/2012 12:24:20</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_LaborList.cshtml">
+      <publishTime>12/01/2013 09:28:24</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_Navigation.cshtml">
+      <publishTime>04/18/2012 18:52:31</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_ServiceList.cshtml">
+      <publishTime>03/12/2012 12:39:44</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_ServiceTabs.cshtml">
+      <publishTime>03/03/2012 19:03:12</publishTime>
+    </File>
+    <File Include="Views/ShopFloor/_Urls.cshtml">
+      <publishTime>04/06/2012 11:40:38</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/30/2012 14:48:11</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/20/2012 17:14:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/22/2014 15:39:30</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="Enfield.ShopManager.Data.Graph.Contact, Enfield.ShopManager.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Contact`">
+    <id name="ContactId" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ContactId" />
+      <generator class="identity" />
+    </id>
+    <property name="LastName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="LastName" />
+    </property>
+    <property name="FirstName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="FirstName" />
+    </property>
+    <property name="ContactDetail" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ContactDetail" />
+    </property>
+    <property name="DoNotify" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="DoNotify" />
+    </property>
+    <many-to-one class="Enfield.ShopManager.Data.Graph.ContactType, Enfield.ShopManager.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ContactType">
+      <column name="ContactTypeId" />
+    </many-to-one>
+    <many-to-one class="Enfield.ShopManager.Data.Graph.Account, Enfield.ShopManager.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Account">
+      <column name="AccountId" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

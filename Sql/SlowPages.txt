@@ -1,0 +1,16 @@
+Select
+	LogRow as [Line Number],
+	date as [Date],
+	time as [Time],
+	c-ip as [Client-IP],
+	s-ip as [Server IP], 
+	s-port as [Server Port],
+	cs-method as [Request Verb],
+	cs-uri-stem as [Request URI],
+	sc-bytes as [Bytes sent],
+	sc-status as [Status],
+	sc-substatus as [Sub-status],
+	sc-win32-status as [Win 32 Status],
+	time-taken as [Time Taken]
+From u_ex*.log
+Order by time-taken desc

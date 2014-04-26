@@ -1,0 +1,45 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@using Enfield.ShopManager.Helpers;
+@{
+    Layout = null;
+    Bundles.Reference("~/Content/Secure");
+    Bundles.Reference("~/Content/themes");
+    Bundles.Reference("~/Scripts/jQuery");
+    Bundles.Reference("~/Scripts/jQueryUi");
+    Bundles.Reference("~/Scripts/Common");
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Error</title>
+    @Bundles.RenderStylesheets()
+</head>
+<body>
+    <div id="container">
+        <div style="background-color: White">
+            <div id="error-notice">
+                <h2>Doh!</h2>
+                <p>An error occurred at the server while processing your request. We have it logged and will troubleshoot eventually.</p>
+                <p>Click <a id="show-error" href="#" >here</a> if you have the stomach for the gory details.</p>
+            </div>
+            <div id="error-filter">
+                @Html.JqueryUiButton("Go Back", "arrowreturnthick-1-w", Model.ActionName, Model.ControllerName)
+            </div>
+            <div id="error-stack">
+                <pre>@Model.Exception.ToString()</pre>
+            </div>
+        </div>
+        @Bundles.RenderScripts()
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#show-error").click(function (e) {
+            $("#error-stack").toggle();
+        });
+    });
+</script>

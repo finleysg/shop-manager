@@ -1,0 +1,14 @@
+﻿@model List<Enfield.ShopManager.Models.AccountTypeLaborModel>
+
+<ul>
+    @foreach (var labor in Model)
+    {
+        <li class="account-type-labor" 
+            data-id="@labor.Id.ToString()" 
+            data-type-id="@labor.LaborTypeId.ToString()"
+            data-parent-id="@labor.Parent.Id.ToString()"
+            data-toplevel-id="@labor.Parent.Parent.Id.ToString()"
+            data-edit-url="@Url.Action("UpdateLaborType")"
+            data-remove-url="@Url.Action("RemoveLaborFromAccountType")">@labor.LaborTypeDescription</li>
+    }
+</ul>

@@ -1,0 +1,44 @@
+﻿@model Enfield.ShopManager.Models.DealerStatementsReport
+@{
+    ViewBag.Title = "Private Statements";
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
+
+@foreach (var statement in Model.Statements)
+{
+<div>
+    @Html.Partial("_ReportHeader", Model.Header)
+    <div class="report-body">
+        @Html.Partial("_ReportAccount", statement.Account)
+        <div class="statement-date">
+            <p>Includes all unpaid invoices up to and including @Model.EndDate</p>
+        </div>
+        <div class="report-detail">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Invoice No</th>
+                    <th>Stock No</th>
+                    <th>PO No</th>
+                    <th>Vehicle</th>
+                    <th class="detail-right">Amount Due</th>
+                </tr>
+                @foreach(Enfield.ShopManager.Models.InvoiceViewModel i in statement.Invoices) {
+                    <tr>
+                        <td>@i.ReceiveDate.ToShortDateString()</td>
+                        <td>@i.Id.ToString()</td>
+                        <td>@i.StockNumber</td>
+                        <td>@i.PurchaseOrderNumber</td>
+                        <td>@i.FormattedVehicleDescription</td>
+                        <td class="detail-right">@i.FormattedGrandTotal</td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="4" class="report-detail-foot">Total vehicles with balance due: @statement.Invoices.Count().ToString()</td>
+                    <td colspan="2" class="detail-right report-detail-foot"><b>Amount due: @statement.FormattedGrandTotal</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+}

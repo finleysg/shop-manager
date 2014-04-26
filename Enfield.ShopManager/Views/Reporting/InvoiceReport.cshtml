@@ -1,0 +1,64 @@
+﻿@model Enfield.ShopManager.Models.InvoiceReportModel
+@{
+    ViewBag.Title = "Invoice";
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
+
+@Html.Partial("_InvoiceReportHeader", Model)
+<div class="report-body">
+    <div><p class="bill-to">Bill To</p></div>
+    @Html.Partial("_ReportAccount", Model.Account)
+    <div id="Vehicle">
+        <table>
+            <tr>
+                <th>Vehicle</th>
+                <th>Stock Number</th>
+                <th class="detail-right">Date</th>
+            </tr>
+            <tr>
+                <td>@Model.Invoice.FormattedVehicle</td>
+                <td>@Model.Invoice.StockNumber</td>
+                <td class="detail-right">@Model.Invoice.ReceiveDate.ToShortDateString()</td>
+            </tr>
+        </table>
+    </div>
+    <div class="report-divider"></div>
+    <div id="Services" class="report-header-right">
+        <table>
+            <thead>
+                <tr>
+                    <th>Services</th>
+                    <th class="detail-right">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var s in Model.Invoice.ServiceList) {
+                <tr>
+                    <td>@s.ServiceTypeDescription</td>
+                    <td class="detail-right">@s.Rate.ToString("C2")</td>
+                </tr>
+            }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="detail-right subtotal">Subtotal:</td>
+                    <td class="detail-right subtotal">@Model.FormattedSubtotal</td>
+                </tr>
+                <tr>
+                    <td class="detail-right">Tax:</td>
+                    <td class="detail-right">@Model.FormattedTax</td>
+                </tr>
+                <tr>
+                    <td class="detail-right amount-due">Amount Due:</td>
+                    <td class="detail-right amount-due">@Model.FormattedAmountDue</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="report-divider"></div>
+    @if (Model.Account.AccountTypeDescription != "PRIVATE") {
+        <div class="receipt">Received by:<span class="line">&nbsp;</span></div>
+        <div class="receipt">Date:<span class="line">&nbsp;</span></div>
+        <div class="receipt">Purchase Order No:<span class="line">&nbsp;</span></div>
+    }
+</div>

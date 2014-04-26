@@ -1,0 +1,44 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.LoginModel
+@{
+    ViewBag.Title = "Shop Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div style="height: 576px;">
+@using (Html.BeginForm("ValidateLogin", "Login", FormMethod.Post, new { @id = "login-form" }))
+{
+    <fieldset>
+        <p>
+            @Html.HiddenFor(m => m.ReturnUrl)
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.LocationId)
+            @Html.DropDownListFor(m => m.LocationId, (IEnumerable<SelectListItem>)ViewBag.Locations)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.DowngradeRole)
+            @Html.CheckBoxFor(m => m.DowngradeRole)
+        </p>
+    </fieldset>
+    <p> 							
+        @Html.JqueryCancelButton("Public", "Index", null)
+        @Html.JquerySubmitButton("Login", "disk")
+	</p>
+    @Html.ValidationSummary(true)
+}
+</div>
+
+@section Filter {
+    <h3>Shop Login</h3>
+    <p>Make sure you select the correct location. This will determine a default account for new invoices (optional), and ensure that all data is logged in the correct place.</p>
+    <p>If you are an administrator or manager, check the shared shop computer box if your are logging into the shop computer that everyone uses.</p>
+}

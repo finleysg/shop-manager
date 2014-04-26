@@ -1,0 +1,63 @@
+﻿@model Enfield.ShopManager.Models.DailyLogReport
+@{
+    ViewBag.Title = "Daily Log";
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
+@section Styles {
+    <link href="@Url.Content("~/Content/log-override.css")" rel="stylesheet" type="text/css" />
+}
+
+@foreach (var location in Model.Invoices)
+{
+<div>
+    @Html.Partial("_ReportHeader", Model.Header)
+    <div class="report-body">
+        <h3>@location.LocationName</h3>
+        <div class="statement-date">
+            <p>Includes all invoices received on @Model.StartDate</p>
+        </div>
+        <div class="report-detail">
+            <table>
+                <tr>
+                    <th>Received</th>
+                    <th>Completed</th>
+                    <th>Invoice No</th>
+                    <th>Stock No</th>
+                    <th>Vehicle</th>
+                    <th>Services</th>
+                    <th>Labor</th>
+                </tr>
+                @foreach(var i in location.Invoices) 
+                {
+                    <tr>
+                        <td>@i.ReceiveDate.ToShortTimeString()</td>
+                        <td>@i.CompleteDateTime</td>
+                        <td>@i.Id.ToString()</td>
+                        <td>@i.StockNumber</td>
+                        <td>@i.FormattedVehicle</td>
+                        <td>
+                            <ul>
+                            @foreach (var s in i.ServiceList)
+                            {
+                                <li>@s.ServiceTypeDescription</li>
+                            }
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                            @foreach (var l in i.LaborList)
+                            {
+                                <li>@string.Format("{0}: {1}", l.EmployeeName, l.LaborTypeDescription)</li>
+                            }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td class="report-detail-foot" colspan="7">Total vehicles received: @location.Count</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+}

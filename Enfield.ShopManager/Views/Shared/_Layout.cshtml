@@ -1,0 +1,43 @@
+﻿@{
+    Bundles.Reference("~/Content/Secure");
+    Bundles.Reference("~/Content/themes");
+    Bundles.Reference("~/Scripts/jQuery");
+    Bundles.Reference("~/Scripts/jQueryUi");
+    Bundles.Reference("~/Scripts/Common");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.CompanyName: @ViewBag.Title</title>
+    <meta name="section" content="@ViewBag.Section" />
+    <meta name="page" content="@ViewBag.Page" />
+    @Bundles.RenderStylesheets()
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <a href="@Url.Action("LogOff", "Login")">Log Off</a>
+            <h1>@ViewBag.CompanyName: <span>@ViewBag.Location</span></h1>
+            @Html.Partial("_MenuPartial", (Enfield.ShopManager.Models.MenuModel)ViewBag.Menu)
+        </div>
+        <div id="content">
+            <div id="content-main">@RenderBody()</div>
+            <div id="content-right">@RenderSection("Filter")</div>
+        </div>
+        <br class="clear" />
+        <div id="footer">
+            <p class="copyright">&copy; 2014 @ViewBag.CompanyName</p>
+        </div>
+        <div id="error-dialog" class="error-detail dialog"></div>
+        @Html.Hidden("account-preview-url", Url.Action("GetAccounts", "Accounts"))
+        @Bundles.RenderScripts()
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var section = $('meta[name=section]').attr("content");
+                var page = $('meta[name=page]').attr("content");
+                Initialize(section, page);
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@model Enfield.ShopManager.Models.UserDetailModel
+@using Enfield.ShopManager.Helpers;
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "User Detail";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "user-detail";
+}
+
+<div style="height: 576px;">
+@using (Html.BeginForm(Model.Action, "Administration", FormMethod.Post, new { @id = "user-form" }))
+{
+    <fieldset id="user-detail">
+        @Html.EditorFor(m => m.User, new { Roles = Model.Roles })
+    </fieldset>
+    <p> 							
+        @Html.JqueryCancelButton("UserListing", "Administration", Model.Filter.GenerateUserAccessRoute())
+        @Html.JquerySubmitButton("Save", "disk")
+        @Html.JqueryAjaxButton("generate-password", "Create Password", "key", Url.Action("GeneratePassword"))
+	</p>
+    @Html.ValidationSummary(true)
+    @Html.Partial("_UserFilterHidden", Model.Filter)
+}
+</div>
+
+@section Filter {
+    <h3>Adding/Editing Users</h3>
+    <p>The login name has to be unique.</p>
+    <p>The rate can be 0 or a positive number with up to 3 decimal places. No negative numbers are allowed.</p>
+    <p>For the password, you can enter a password or let the system generate one with the New Password button. If you leave the password blank for an existing user, it will not be changed.</p>
+    <p>If someone is no longer employed, clear the Can Sign In checkbox.</p>
+    <p>Only a user with the Can Log In checkbox selected can log into the system.</p>
+    <p>Administrators and Managers can log in from anywhere.</p>
+}

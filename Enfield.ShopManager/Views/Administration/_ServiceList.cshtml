@@ -1,0 +1,17 @@
+﻿@model List<Enfield.ShopManager.Models.ServiceModel>
+           
+<div id="service-detail" style="margin-top: 24px;" class="invoice-adminchild-detail">
+    <table>
+        @foreach (var service in Model)
+        {
+            <tr data-id="@service.Id.ToString()" data-edit-url="@Url.Action("EditServiceRate")">
+                <td><a class="service-edit" href="#">edit</a></td>
+                <td class="description">@service.ServiceTypeDescription</td>
+                <td class="rate">@service.Rate.ToString("C")</td>
+            </tr>
+        }
+        <tr>
+            <td class="rate total" colspan="3">@Model.Sum(s => s.Rate).ToString("C")</td>
+        </tr>
+    </table>
+</div>

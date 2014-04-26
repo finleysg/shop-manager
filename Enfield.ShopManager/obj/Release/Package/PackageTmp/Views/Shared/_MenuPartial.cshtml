@@ -1,0 +1,19 @@
+﻿@model Enfield.ShopManager.Models.MenuModel
+@using Enfield.ShopManager.Helpers
+
+<div id="menu">
+    <ul id="main-menu">
+        @foreach (var item in Model.MainMenu.Where(m => m.IsVisible))
+        {
+            <li id="@item.Id" title="@item.HelpText" class="ui-corner-top" data-selected="@item.IsSelected" data-enabled="@item.IsEnabled" data-url="@Url.Action(item.Action, item.Controller)">@item.DisplayText</li>
+        }
+    </ul>
+    <div id="sub-menu">
+        <ul>
+            @foreach (var item in Model.SubMenu.Where(m => m.IsVisible))
+            {
+                <li id="@item.Id" title="@item.HelpText" data-selected="@item.IsSelected" data-enabled="@item.IsEnabled" data-url="@Url.Action(item.Action, item.Controller)">@item.DisplayText</li>
+            }
+        </ul>
+    </div>
+</div>

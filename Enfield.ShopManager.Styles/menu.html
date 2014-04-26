@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Enfield's Detail: Shop Floor</title>
+    <meta name="title" content="shop-floor" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="base.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+    <script src="Scripts/menu.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="header">
+        <a href="#">Log Off</a>
+        <a href="#">Change Password</a>
+        <p>Enfield's Detail <span>(Main Shop)</span></p>
+        <div id="menu">
+            <ul id="main-menu">
+                <li title="shop-floor">Shop Floor</li>
+                <li title="accounts">Accounts</li>
+                <li title="reporting">Reporting</li>
+                <li title="administration">Administration</li>
+                <li title="dealer">Dealer</li>
+            </ul>
+            <div id="sub-menu">
+                <ul id="shop-floor-menu" style="display: none">
+                    <li title="new-vehicle">New Vehicle</li>
+                    <li title="print-invoice">Print Invoice</li>
+                    <li title="complete-vehicle">Complete Vehicle</li>
+                    <li title="recall-vehicle">Recall Vehicle</li>
+                    <li title="add-note">Add Note</li>
+                    <li title="delete-vehicle">Delete Vehicle</li>
+                    <li title="search">Search</li>
+                    <li title="sign-in">Sign In</li>
+                </ul>
+                <ul id="accounts-menu" style="display: none">
+                    <li title="account-listing">Account Listing</li>
+                    <li title="account-detail">Account Detail</li>
+                </ul>
+                <ul id="reporting-menu" style="display: none">
+                    <li title="dealer-statements">Dealer Statements</li>
+                    <li title="dealer-totals">Dealer Totals</li>
+                    <li title="payroll">Payroll</li>
+                    <li title="daily-log">Daily Log</li>
+                    <li title="employee">Employee Log</li>
+                    <li title="invoice">Invoice</li>
+                </ul>
+                <ul id="administration-menu">
+                    <li title="invoice-listing">Invoice Listing</li>
+                    <li title="invoice-detail">Invoice Detail</li>
+                    <li title="user-access">User Access</li>
+                    <li title="services-and-labor">Services and Labor</li>
+                    <li title="security-log">Security Log</li>
+                    <li title="error-log">Error Log</li>
+                </ul>
+                <ul id="dealer-menu" style="display: none">
+                    <li title="in-shop">In Shop</li>
+                    <li title="history">History</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="content-main">Content</div>
+        <div id="content-right">Filter</div>
+    </div>
+    <br class="clear" />
+    <div id="footer">Footer</div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var section = $('meta[name=title]').attr("content");
+        initializeMenu(section);
+        $("#main-menu>li").click(function (e) {
+            initializeMenu($(this).attr("title"));
+        });
+        $("#sub-menu li").click(function (e) {
+            initializeMenu(section, $(this).attr("title"));
+        });
+    });
+</script>
+</html>

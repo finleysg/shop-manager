@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{C17947F3-BCE6-4A03-B2FC-AA22173A08D7}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Castle.Core.dll = Lib\Castle.Core.dll
+		Lib\Castle.Facilities.Logging.dll = Lib\Castle.Facilities.Logging.dll
+		Lib\Castle.Services.Logging.Log4netIntegration.dll = Lib\Castle.Services.Logging.Log4netIntegration.dll
+		Lib\Castle.Windsor.dll = Lib\Castle.Windsor.dll
+		Lib\Elmah.dll = Lib\Elmah.dll
+		Lib\FluentNHibernate.dll = Lib\FluentNHibernate.dll
+		Lib\Iesi.Collections.dll = Lib\Iesi.Collections.dll
+		Lib\log4net.dll = Lib\log4net.dll
+		Lib\NHibernate.ByteCode.Castle.dll = Lib\NHibernate.ByteCode.Castle.dll
+		Lib\NHibernate.dll = Lib\NHibernate.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enfield.ShopManager.Data.Tests", "Enfield.ShopManager.Data.Tests\Enfield.ShopManager.Data.Tests.csproj", "{799122E7-2F00-402E-A793-364FB97F5C20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enfield.ShopManager.Styles", "Enfield.ShopManager.Styles\Enfield.ShopManager.Styles.csproj", "{F512777D-36B7-457D-8945-FB65D1AA0E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enfield.ShopManager", "Enfield.ShopManager\Enfield.ShopManager.csproj", "{5E63B3AF-AD55-4A73-9995-6705CD5190C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enfield.ShopManager.Data", "Enfield.ShopManager.Data\Enfield.ShopManager.Data.csproj", "{D89CD166-7B81-49D2-9921-6061CA45789B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enfield.ShopManager.Tests", "Enfield.ShopManager.Test\Enfield.ShopManager.Tests.csproj", "{17DC1AA1-9721-4781-ADF5-9890B8748E08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{799122E7-2F00-402E-A793-364FB97F5C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799122E7-2F00-402E-A793-364FB97F5C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799122E7-2F00-402E-A793-364FB97F5C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F512777D-36B7-457D-8945-FB65D1AA0E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F512777D-36B7-457D-8945-FB65D1AA0E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F512777D-36B7-457D-8945-FB65D1AA0E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E63B3AF-AD55-4A73-9995-6705CD5190C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E63B3AF-AD55-4A73-9995-6705CD5190C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E63B3AF-AD55-4A73-9995-6705CD5190C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E63B3AF-AD55-4A73-9995-6705CD5190C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89CD166-7B81-49D2-9921-6061CA45789B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89CD166-7B81-49D2-9921-6061CA45789B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89CD166-7B81-49D2-9921-6061CA45789B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89CD166-7B81-49D2-9921-6061CA45789B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DC1AA1-9721-4781-ADF5-9890B8748E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DC1AA1-9721-4781-ADF5-9890B8748E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DC1AA1-9721-4781-ADF5-9890B8748E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

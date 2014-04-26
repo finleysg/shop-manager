@@ -1,0 +1,31 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.InvoiceAdministrationModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Invoice Detail";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "invoice-detail";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.InvoiceList, page => Url.Action("InvoiceDetail", Model.Filter.GenerateInvoiceRoute(page)), new AdminDetailRenderOptions())
+</div>
+
+<div style="height: 576px">
+    @using (Html.BeginForm("InvoiceDetail", "Administration", FormMethod.Post, new { @id = "detail-form" }))
+    {
+        <div id="invoice-admin">
+            @Html.Partial("_InvoiceDetail", Model.CurrentInvoice)
+            @Html.Partial("_ServiceList", Model.CurrentInvoice.ServiceList)
+            @Html.Partial("_LaborList", Model.CurrentInvoice.LaborList)
+            @Html.Partial("_HistoryList", Model.CurrentInvoice.History)
+        </div>
+    }
+    @Html.Partial("_InvoiceDialogs")
+</div>
+
+@section Filter {
+    @Html.Partial("_InvoiceFilter", Model.Filter)
+    <p>@Html.JqueryUiButton("Back to Invoice List", "arrowreturnthick-1-w", "InvoiceListing", "Administration", Model.Filter.GenerateInvoiceRoute())</p>
+}

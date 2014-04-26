@@ -1,0 +1,44 @@
+﻿@model Enfield.ShopManager.Models.UserModel
+
+<p>
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+    @Html.Hidden("OriginalName", Model.Name)
+</p>
+<p>
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+</p>
+<p>
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+</p>
+<p>
+    @Html.LabelFor(m => m.Rate)
+    @Html.TextBoxFor(m => m.Rate)
+    @Html.ValidationMessageFor(m => m.Rate)
+</p>
+<p>
+    @Html.LabelFor(m => m.RoleName)
+    @Html.DropDownListFor(m => m.RoleName, (SelectList)ViewBag.Roles)
+</p>
+<p>
+    @Html.LabelFor(m => m.LocationId)
+    @Html.DropDownListFor(m => m.LocationId, (List<SelectListItem>)ViewBag.Locations)
+</p>
+<p>
+    @Html.LabelFor(m => m.PasswordString)
+    @Html.TextBoxFor(m => m.PasswordString)
+</p>
+<p>
+    @Html.LabelFor(m => m.CanLogin)
+    @Html.CheckBoxFor(m => m.CanLogin)
+</p>
+<p>
+    @Html.LabelFor(m => m.IsEmployed)
+    @Html.CheckBoxFor(m => m.IsEmployed)
+</p>
+

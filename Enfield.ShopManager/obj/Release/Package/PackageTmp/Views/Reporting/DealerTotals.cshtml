@@ -1,0 +1,34 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.DealerTotalsParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");
+    ViewBag.Title = "Dealer Totals";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "dealer-totals";
+}
+
+@using  (Html.BeginForm())
+{
+    <div class="report-params-right">
+        <h2>Start Date</h2>
+        <p><input class="dp" type="text" name="startDate" value="@Model.StartDate" /></p>
+    </div>
+    <div class="report-params-center">
+        <h2>End Date</h2>
+        <p><input class="dp" type="text" name="endDate" value="@Model.EndDate" /></p>
+    </div>
+    <div class="report-params-left">
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+        <p>
+            @Html.RadioButton("reportType", "formatted", true) Formatted Report
+        </p>
+        <p>
+            @Html.RadioButton("reportType", "data-only") Data Only (for export)
+        </p>
+    </div>
+}
+
+@section Filter {
+    <h3>Dealer Totals</h3>
+    <p>All invoices in the data range will be pulled into the report, including all private accounts rolled up under "PRIVATE".</p>
+}

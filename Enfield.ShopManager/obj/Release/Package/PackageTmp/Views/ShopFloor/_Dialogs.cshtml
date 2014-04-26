@@ -1,0 +1,86 @@
+﻿<div id="confirm-action-dialog" class="dialog">
+    <p class="confirm">Delete the current invoice?</p>
+</div>
+<div id="edit-service-dialog" class="dialog">
+    <span id="edit-servicetype-description"></span>
+    <fieldset>
+        <p>
+            <label for="edit-service-rate">Service rate:</label>
+            @Html.TextBox("edit-service-rate", null)
+            @Html.Hidden("edit-service-id")
+        </p>
+    </fieldset>
+</div>
+<div id="edit-labor-dialog" class="dialog">
+    <span id="edit-labortype-description"></span>
+    <fieldset>
+        <p>
+            <label for="edit-labor-rate">Labor rate:</label>
+            @Html.TextBox("edit-labor-rate", null)
+            @Html.Hidden("edit-labor-id")
+        </p>
+    </fieldset>
+</div>
+<div id="new-service-dialog" class="dialog">
+    <span id="new-servicetype-description"></span>
+    <fieldset>
+        <p>
+            <label for="new-service-rate">Service rate:</label>
+            @Html.TextBox("new-service-rate", null)
+            @Html.Hidden("new-servicetype-id")
+        </p>
+    </fieldset>
+</div>
+<div id="new-labor-dialog" class="dialog">
+    <span id="new-labortype-description"></span>
+    <fieldset>
+        <p>
+            <label for="new-labor-rate">*Labor rate:</label>
+            @Html.TextBox("new-labor-rate", null)
+            @Html.Hidden("new-labortype-id")
+        </p>
+    </fieldset>
+    <p>* Non-zero rate is required</p>
+</div>
+<div id="edit-history-dialog" class="dialog">
+    <textarea id="edit-history-note" cols="40" rows="6"></textarea>
+</div>
+<div id="edit-account-dialog">
+    <fieldset>
+        <p>
+            <label for="edit-account-name">Account name:</label>
+            @Html.TextBox("edit-account-name", null, new { @size = 30 })
+            @Html.Hidden("edit-account-id", null, new { @data_url = Url.Action("UpdateAccount") });
+        </p>
+    </fieldset>
+</div>
+<div id="sign-in-dialog" class="dialog">
+    <fieldset>
+        <p>
+            <label for="sign-in-name">Login name:</label>
+            @Html.DropDownList("sign-in-name", (SelectList)ViewBag.ActiveEmployees)
+        </p>
+    </fieldset>
+</div>
+<div id="sign-out-dialog" class="dialog">
+    <fieldset>
+        <p>
+            <label for="sign-out-name">Login name:</label>
+            @Html.DropDownList("sign-out-name", (SelectList)ViewBag.SignedInEmployees, "EVERYONE")
+        </p>
+    </fieldset>
+</div>
+<div id="print-invoice-dialog">
+    <fieldset>
+        <label for="invoice-to-print">Invoice number:</label>
+        @Html.TextBox("invoice-to-print", null)
+    </fieldset>
+</div>
+<div id="search-dialog">
+    <fieldset>
+        <p><label for="invoice-to-search">Invoice number:</label></p>
+        <p>@Html.TextBox("invoice-to-search", null)</p>
+        <p><label for="stock-number-to-search">Stock number:</label></p>
+        <p>@Html.TextBox("stock-number-to-search", null)</p>
+    </fieldset>
+</div>

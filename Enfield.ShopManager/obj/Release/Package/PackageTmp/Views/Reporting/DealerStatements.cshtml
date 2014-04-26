@@ -1,0 +1,44 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.DealerStatementParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");   
+    ViewBag.Title = "Dealer Statements";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "dealer-statements";
+}
+
+@using  (Html.BeginForm())
+{
+    <div class="report-params-left">
+        <h2>Dealer Accounts</h2>
+        @foreach (var account in Model.DealerAccounts)
+        {
+            <p>
+                <label for="selected-account" class="ui-widget-content">
+                    <input type="checkbox" name="selectedAccounts" value="@account.Value" />@account.Text
+                </label>
+            </p>
+        }
+    </div>
+    <div class="report-params-center">
+        <h2>End Date</h2>
+        <p><input class="dp" type="text" name="endDate" value="@Model.EndDate" /></p>
+    </div>
+    <div class="report-params-right">
+        <p>@Html.JqueryUiButton("select-all", "Select All", "check")</p>
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+        <p>
+            @Html.RadioButton("reportType", "formatted", true) Formatted Report
+        </p>
+        <p>
+            @Html.RadioButton("reportType", "data-only") Data Only (for export)
+        </p>
+    </div>
+}
+
+@section Filter {
+    <h3>Dealer Statements</h3>
+    <p>Dealers listed all have an open balance due.</p>
+    <p>Check just those dealers you want to add to the report.</p>
+    <p>All invoices with an open balance due (greater than 0) will be pulled into the report.</p>
+}

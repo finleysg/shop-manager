@@ -1,0 +1,18 @@
+﻿@model Enfield.ShopManager.Models.ServicesModel
+           
+<div id="service-tabs">
+    <ul>
+        <li><a href="#service-tab"><span>Services</span></a></li>
+        <li><a href="#labor-tab"><span>Labor</span></a></li>
+        <li><a href="#employee-tab"><span>Signed In</span></a></li>
+    </ul>
+    <div id="service-tab" class="task-list">
+        @Html.Partial("_AvailableServiceTypes", Model.AvailableServices)
+    </div>
+    <div id="labor-tab" class="task-list">
+        @Html.Partial("_AvailableLaborTypes", Model.AvailableLabor)
+    </div>
+    <div id="employee-tab" class="task-list">
+        @Html.Partial("_AvailableEmployees", Model.SignedInEmployees)
+    </div>
+</div>

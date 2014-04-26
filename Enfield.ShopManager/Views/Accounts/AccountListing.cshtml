@@ -1,0 +1,29 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.AccountListingModel
+@{
+    Bundles.Reference("~/Scripts/Accounts");
+    ViewBag.Title = "Account Listing";
+    ViewBag.Section = "accounts";
+    ViewBag.Page = "account-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.AccountList, page => Url.Action("AccountListing", Model.Filter.GenerateAccountListingRoute(page)), new AdminListRenderOptions())
+    <div class="pager-size">Show @Html.DropDownListFor(m => m.Filter.Size, (SelectList)ViewBag.SizeOptions) at a time</div>
+</div>
+
+@{
+    var grid = new WebGrid(Model.AccountList, canSort: false, rowsPerPage: Model.Filter.Size);
+}
+<div class="admin-listing">
+    @grid.GetHtml(columns: grid.Columns(
+        grid.Column("AccountNumber", "Account Number", format: (item) => Html.ActionLink((string)item.AccountNumber, "EditAccount", Model.Filter.GenerateAccountDetailRoute((int)item.Id))),
+        grid.Column("Name", "Account Name"),
+        grid.Column("AccountTypeDescription", "Account Type")
+    ))
+</div> 
+
+@section Filter {
+    @Html.Partial("_AccountFilter", Model.Filter)
+}

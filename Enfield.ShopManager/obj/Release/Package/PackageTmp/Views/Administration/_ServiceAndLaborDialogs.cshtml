@@ -1,0 +1,39 @@
+﻿<div id="confirm-action-dialog" class="dialog">
+    <p class="confirm">Delete the current invoice?</p>
+</div>
+<div id="add-service-dialog" class="dialog">
+    <span id="add-service-prompt"></span>
+    <fieldset>
+        <p>
+            <label for="add-service-type-id">Select service type:</label>
+            @Html.DropDownList("add-service-type-id", (SelectList)ViewBag.ServiceTypes)
+        </p>
+    </fieldset>
+</div>
+<div id="add-labor-dialog" class="dialog">
+    <span id="add-labor-prompt"></span>
+    <fieldset>
+        <p>
+            <label for="add-labor-type-id">Select labor type:</label>
+            @Html.DropDownList("add-labor-type-id", (SelectList)ViewBag.LaborTypes)
+        </p>
+    </fieldset>
+</div>
+<div id="rename-type-dialog" class="dialog">
+    <span id="rename-type-prompt"></span>
+    <fieldset>
+        <p>
+            <label id="type-name-label" for="type-name">Label:</label>
+            @Html.TextBox("type-name", null)
+        </p>
+    </fieldset>
+</div>
+<div id="add-type-dialog" class="dialog">
+    <span id="add-type-prompt"></span>
+    <fieldset>
+        <p>
+            <label id="new-type-name-label" for="new-type-name">Label:</label>
+            @Html.TextBox("new-type-name", null)
+        </p>
+    </fieldset>
+</div>

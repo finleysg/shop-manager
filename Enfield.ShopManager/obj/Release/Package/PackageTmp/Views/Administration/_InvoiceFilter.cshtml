@@ -1,0 +1,26 @@
+﻿@model Enfield.ShopManager.Models.InvoiceFilterModel
+@using Enfield.ShopManager.Helpers
+
+@using (Html.BeginForm((string)ViewBag.Filter, "Administration", FormMethod.Get, new { @id = "filter-form" }))
+{
+    <fieldset>
+        @Html.LabelFor(m => m.ReceivedDateStart)
+        @Html.EditorFor(m => m.ReceivedDateStart)
+        @Html.LabelFor(m => m.ReceivedDateEnd)
+        @Html.EditorFor(m => m.ReceivedDateEnd)
+        @Html.LabelFor(m => m.LocationId)
+        @Html.DropDownListFor(m => m.LocationId, (IEnumerable<SelectListItem>)ViewBag.Locations)
+        @Html.LabelFor(m => m.AccountName)
+        @Html.TextBoxFor(m => m.AccountName, new { @size = 30 })
+        @Html.LabelFor(m => m.HasBeenPaid)
+        @Html.DropDownListFor(m => m.HasBeenPaid, (SelectList)ViewBag.Paid)
+        @Html.LabelFor(m => m.ExcludeZeroTotal)
+        @Html.CheckBoxFor(m => m.ExcludeZeroTotal)
+        @Html.HiddenFor(m => m.Page)
+        @Html.HiddenFor(m => m.Size)
+        @Html.HiddenFor(m => m.DoEvaluate)
+    </fieldset>
+    <p>
+        @Html.JqueryUiButton("apply-filter", "Apply Filter", "check")
+    </p>
+}

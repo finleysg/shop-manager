@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Projects\ShopManager\Enfield.ShopManager.Data.Tests\bin\Debug\Enfield.ShopManager.Data.Tests.dll" total="47" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-01-28" time="16:23:23">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5448" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0" machine-name="ISDEVL-G5173293" user="G517329" user-domain="GENMILLS" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Projects\ShopManager\Enfield.ShopManager.Data.Tests\bin\Debug\Enfield.ShopManager.Data.Tests.dll" executed="True" result="Success" success="True" time="8.979" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Enfield" executed="True" result="Success" success="True" time="8.965" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ShopManager" executed="True" result="Success" success="True" time="8.964" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Data" executed="True" result="Success" success="True" time="8.964" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="8.964" asserts="0">
+                    <results>
+                      <test-suite type="SetUpFixture" name="Mapping" executed="True" result="Success" success="True" time="8.497" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="AccountTest" executed="True" result="Success" success="True" time="2.189" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.AccountTest.Account_NoContacts_VerifyMap" executed="True" result="Success" success="True" time="1.885" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.AccountTest.Account_WithContacts_VerifyMap" executed="True" result="Success" success="True" time="0.229" asserts="3" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.AccountTest.Contact_VerifyMap" executed="True" result="Success" success="True" time="0.049" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="EqualityTests" executed="True" result="Success" success="True" time="0.030" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithDifferentIds_ReturnsFalse" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithDifferentIdsInDisparateClasses_ReturnsFalse" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithNullObject_ReturnsFalse" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithOneTransientObject_ReturnsFalse" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithSameIds_ReturnsTrue" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithSameIdsInDisparateClasses_ReturnsFalse" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithSameIdsInSubclass_ReturnsTrue" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithTransientObjects_ReturnsFalse" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.EqualityTests.Equals_WithTwoNullObjects_ReturnsTrue" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="InvoiceTest" executed="True" result="Success" success="True" time="0.307" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Employee_VerifyMap" executed="True" result="Success" success="True" time="0.027" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Invoice_CanAddLabor" executed="True" result="Success" success="True" time="0.134" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Invoice_CanAddService" executed="True" result="Success" success="True" time="0.035" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Invoice_VerifyMap" executed="True" result="Success" success="True" time="0.013" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.InvoiceHistory_VerifyMap" executed="True" result="Success" success="True" time="0.009" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Labor_VerifyMap" executed="True" result="Success" success="True" time="0.059" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.InvoiceTest.Service_VerifyMap" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="LogTest" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LogTest.AccountType_VerifyMap" executed="True" result="Success" success="True" time="0.009" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="LookupTest" executed="True" result="Success" success="True" time="0.142" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountLaborType_VerifyMap" executed="True" result="Success" success="True" time="0.005" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountType_CanAddService" executed="True" result="Success" success="True" time="0.019" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountType_LoadDealer_HasAllChildren" executed="True" result="Success" success="True" time="0.012" asserts="3" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountType_VerifyMap" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountTypeService_CanAddLabor" executed="True" result="Success" success="True" time="0.011" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.AccountTypeService_VerifyMap" executed="True" result="Success" success="True" time="0.018" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.ContactType_VerifyMap" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.LaborType_VerifyMap" executed="True" result="Success" success="True" time="0.024" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.Location_VerifyMap" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Mapping.LookupTest.ServiceType_VerifyMap" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="SetUpFixture" name="Repositories" executed="True" result="Success" success="True" time="0.459" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="AccountRespositoryTests" executed="True" result="Success" success="True" time="0.131" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.AccountRespositoryTests.GetAccount_ReturnsBillGuy" executed="True" result="Success" success="True" time="0.056" asserts="3" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.AccountRespositoryTests.GetAccounts_All_Returns3" executed="True" result="Success" success="True" time="0.036" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.AccountRespositoryTests.GetAccounts_WithFilter_Returns2" executed="True" result="Success" success="True" time="0.005" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.AccountRespositoryTests.SaveAccount_NoContacts" executed="True" result="Success" success="True" time="0.010" asserts="4" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.AccountRespositoryTests.SaveAccount_WithContacts" executed="True" result="Success" success="True" time="0.012" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="InvoiceRepositoryTests" executed="True" result="Success" success="True" time="0.133" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoice_ReturnBlueFordEscape" executed="True" result="Success" success="True" time="0.009" asserts="4" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoiceHistory_HasCompleteStockNumberHistory" executed="True" result="Success" success="True" time="0.019" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoices_ByAccount" executed="True" result="Success" success="True" time="0.014" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoices_ByLocation" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoices_ByPartialAccount" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoices_ByReceiveDate" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.GetInvoices_ByStockNumber" executed="True" result="Success" success="True" time="0.003" asserts="1" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.InvoiceRepositoryTests.SaveInvoice_MarkPaid" executed="True" result="Success" success="True" time="0.053" asserts="2" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="SecurityRepositoryTests" executed="True" result="Success" success="True" time="0.060" asserts="0">
+                            <results>
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.SecurityRepositoryTests.GetUsers_Default_ReturnsEmployeesWithSiteAccess" executed="True" result="Success" success="True" time="0.021" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.SecurityRepositoryTests.GetUsers_ReturnsAdministrators" executed="True" result="Success" success="True" time="0.004" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.SecurityRepositoryTests.GetUsers_ReturnsAll" executed="True" result="Success" success="True" time="0.017" asserts="2" />
+                              <test-case name="Enfield.ShopManager.Data.Tests.Repositories.SecurityRepositoryTests.GetUsers_ReturnsUsersWithSiteAccess" executed="True" result="Success" success="True" time="0.008" asserts="2" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

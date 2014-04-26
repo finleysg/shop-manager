@@ -1,0 +1,13 @@
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Enfield.ShopManager.Test.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Enfield.ShopManager.Test.pdb
+C:\Projects\Enfield\ShopManager\ShopManager.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Enfield\ShopManager\ShopManager.Test\obj\Debug\Enfield.ShopManager.Test.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\obj\Debug\Enfield.ShopManager.Test.pdb
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Castle.Core.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Castle.Windsor.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\nunit.framework.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\nunit.mocks.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\pnunit.framework.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Castle.Core.xml
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\Castle.Windsor.xml
+C:\Projects\Enfield\ShopManager\ShopManager.Test\bin\Debug\nunit.framework.xml

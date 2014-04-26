@@ -1,0 +1,30 @@
+﻿@model Enfield.ShopManager.Models.InvoiceModel
+
+<div class="invoice-admin-detail">
+    <fieldset>
+        @Html.LabelFor(m => m.IsPaid)
+        @Html.CheckBoxFor(m => m.IsPaid, new { @data_url = Url.Action("UpdateInvoicePaidStatus") })
+        @Html.LabelFor(m => m.Id)
+        @Html.TextBoxFor(m => m.Id, new { @readonly = "readonly" })
+        @Html.LabelFor(m => m.LocationName)
+        @Html.TextBoxFor(m => m.LocationName, new { @readonly = "readonly" })
+        @Html.LabelFor(m => m.ReceiveDate)
+        @Html.TextBoxFor(m => m.ReceiveDate, new { @readonly = "readonly" })
+        @Html.LabelFor(m => m.CompleteDate)
+        @Html.TextBoxFor(m => m.CompleteDate, new { @readonly = "readonly" })
+        @Html.LabelFor(m => m.AccountName)
+        @Html.TextBoxFor(m => m.AccountName, new { @readonly = "readonly", @size = 30 })
+        @Html.LabelFor(m => m.StockNumber)
+        @Html.TextBoxFor(m => m.StockNumber)
+        @Html.LabelFor(m => m.Year)
+        @Html.TextBoxFor(m => m.Year)
+        @Html.LabelFor(m => m.Make)
+        @Html.TextBoxFor(m => m.Make)
+        @Html.LabelFor(m => m.Model)
+        @Html.TextBoxFor(m => m.Model)
+        @Html.LabelFor(m => m.Color)
+        @Html.TextBoxFor(m => m.Color)
+        @Html.LabelFor(m => m.PurchaseOrderNumber)
+        @Html.TextBoxFor(m => m.PurchaseOrderNumber, new { @data_url = Url.Action("UpdateInvoicePurchaseOrder") })
+    </fieldset>
+</div>

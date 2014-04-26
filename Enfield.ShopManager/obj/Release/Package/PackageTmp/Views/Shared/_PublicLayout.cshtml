@@ -1,0 +1,74 @@
+﻿@model Enfield.ShopManager.Models.PublicMenuModel
+@{
+    Bundles.Reference("~/Content/Public");
+    Bundles.Reference("~/Content/themes");
+    Bundles.Reference("~/Scripts/jquery");
+    Bundles.Reference("~/Scripts/public");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enfield's Detail and Auto Reconditioning</title>
+    <meta name="TITLE" content="Enfield's Detail" />
+    <meta name="DESCRIPTION" content="Enfield's Detail has been serving Memphis car owners for 25 years" />
+    <meta name="KEYWORDS" content="car detailing, car wash, shampoo carpet, rim cleaning, vacuum, wax, air freshener, tint removal, upholstery cleaning, engine cleaning, buffing, hand wash and wax, pin striping, dye seats, overspray removal, waterspot removal, vehicle reconditioning, memphis, tennessee" />
+    @RenderSection("MetaData", false)
+    @Bundles.RenderStylesheets()
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p><span class="title-1">ENFIELD'S</span><span class="title-2">DETAIL</span></p>
+            <div class="beauty-shot">
+                @RenderSection("BeautyShot", false)
+            </div>
+            <div class="public-menu">
+                <ul>
+                    @foreach (var m in Model.SubMenu)
+                    {
+                    <li class="ui-corner-bottom" data-selected="@m.IsSelected" data-url="@Url.Action(m.Action)">@m.DisplayText</li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <div class="banner">
+            <p>CALL TODAY FOR AN APPOINTMENT <i>or</i></p>
+            <p>BRING YOUR CAR IN FOR AN ESTIMATE</p>
+        </div>
+        <br class="clear" />
+        <div class="footer">
+            <div class="footer-find">
+                <p>find us:</p>
+                <p>2370 COVINGTON PIKE</p>
+                <p>MEMPHIS, TN 38134</p>
+            </div>
+            <div class="footer-call">
+                <p>call us:</p>
+                <p>901-372-1560</p>
+            </div>
+            <div class="footer-facebook">
+                <p>visit us on Facebook:</p>
+                <p>
+                    <a href="http://www.facebook.com/EnfieldsDetail" title="visit us on Facebook"><img src="@Url.Content("~/Content/images/facebook_32.png")" alt="facebook" /></a>
+                </p>
+            </div>
+            <br class="clear" />
+            <p class="copywrite">&copy;  2012 Enfield's Detail - All Rights Reserved</p>
+        </div>
+        @Bundles.RenderScripts()
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".public-menu li").click(function (e) {
+                if ($(this).attr("data-selected") != "True") {
+                    document.location.href = $(this).attr("data-url");
+                }
+            });
+            $(".gallery-thumbs a").fancybox();
+        });
+    </script>
+</body>
+</html>

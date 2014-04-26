@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D89CD166-7B81-49D2-9921-6061CA45789B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Enfield.ShopManager.Data</RootNamespace>
+    <AssemblyName>Enfield.ShopManager.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.Logging, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Facilities.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Logging.Log4netIntegration, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.2.0.712, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audit\AuditEventListener.cs" />
+    <Compile Include="Audit\IHaveAuditInformation.cs" />
+    <Compile Include="Graph\Account.cs" />
+    <Compile Include="Graph\AccountType.cs" />
+    <Compile Include="Graph\AccountTypeLabor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graph\AccountTypeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graph\AvailableLaborView.cs" />
+    <Compile Include="Graph\AvailableServicesView.cs" />
+    <Compile Include="Graph\EmployeeLogView.cs" />
+    <Compile Include="Graph\Employee.cs" />
+    <Compile Include="Graph\EmployeeLog.cs" />
+    <Compile Include="Graph\EmployeeView.cs" />
+    <Compile Include="Graph\Invoice.cs" />
+    <Compile Include="Graph\InvoiceView.cs" />
+    <Compile Include="Graph\OpenBalanceView.cs" />
+    <Compile Include="Graph\ServiceTotalsView.cs" />
+    <Compile Include="Graph\StockNumberHistory.cs" />
+    <Compile Include="Graph\Labor.cs" />
+    <Compile Include="Graph\LaborType.cs" />
+    <Compile Include="Graph\LoginAttemptLog.cs" />
+    <Compile Include="Graph\Contact.cs" />
+    <Compile Include="Graph\ContactType.cs" />
+    <Compile Include="Graph\Service.cs" />
+    <Compile Include="Graph\ServiceType.cs" />
+    <Compile Include="Map\EnfieldHasManyConvention.cs" />
+    <Compile Include="Map\EnfieldReferenceConvention.cs" />
+    <Compile Include="Map\LoginAttemptLogMap.cs" />
+    <Compile Include="PersistenceFacility.cs" />
+    <Compile Include="Query\AccountQuery.cs" />
+    <Compile Include="Query\InvoiceQuery.cs" />
+    <Compile Include="Query\LaborQuery.cs" />
+    <Compile Include="Query\LoginQuery.cs" />
+    <Compile Include="Query\QueryBase.cs" />
+    <Compile Include="Query\SignInQuery.cs" />
+    <Compile Include="Query\UserQuery.cs" />
+    <Compile Include="Repository\AccountRepository.cs" />
+    <Compile Include="Map\DoNotMapAttribute.cs" />
+    <Compile Include="Graph\AutoMapBase.cs" />
+    <Compile Include="Graph\Location.cs" />
+    <Compile Include="Map\EnfieldDataConfiguration.cs" />
+    <Compile Include="Map\EnfieldForeignKeyConvention.cs" />
+    <Compile Include="Map\EnfieldPrimaryKeyConvention.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AccountTypeRepository.cs" />
+    <Compile Include="Repository\InvoiceRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IRepositoryFactory.cs" />
+    <Compile Include="Repository\LookupRepository.cs" />
+    <Compile Include="Repository\ReportRepository.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\SecurityRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cache\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

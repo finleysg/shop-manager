@@ -1,0 +1,26 @@
+﻿@model Enfield.ShopManager.Models.ContactModel
+
+<div>
+    <fieldset>
+        @Html.Hidden("ContactId", Model.Id.ToString())
+        <p>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+            @Html.ValidationMessageFor(m => m.FirstName)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+            @Html.ValidationMessageFor(m => m.LastName)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.ContactTypeId)
+            @Html.DropDownListFor(m => m.ContactTypeId, (List<SelectListItem>)ViewBag.ContactTypes)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.ContactDetail)
+            @Html.TextBoxFor(m => m.ContactDetail, new { @size = 30 })
+            @Html.ValidationMessageFor(m => m.ContactDetail)
+        </p>
+    </fieldset>
+</div>

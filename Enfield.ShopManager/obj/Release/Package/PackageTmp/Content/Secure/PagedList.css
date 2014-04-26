@@ -1,0 +1,43 @@
+﻿.PagedList-pager > ul{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.PagedList-pager > ul > li{
+	margin: .25em;
+	display: inline-block;
+    vertical-align: middle;
+}
+.PagedList-goToPage > fieldset{
+	border: 0;
+}
+.PagedList-skipToPrevious
+{
+    width: 16px; 
+    height: 16px; 
+    background-image: url(../images/ui-icons_cc0000_256x240.png);
+    background-position: -48px -160px;
+}
+.PagedList-skipToNext
+{
+    width: 16px; 
+    height: 16px; 
+    background-image: url(../images/ui-icons_cc0000_256x240.png);
+    background-position: -32px -160px;
+}
+.pagination {
+    float: left;
+}
+.pager-header {
+    background-color: #fbf8ee;
+    height: 2em;
+    padding-top: .2em;
+    padding-left: .8em;
+}
+.pager-size {
+    float: right;
+    vertical-align: middle;
+    padding-right: .8em;
+}
+

@@ -1,0 +1,25 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.DailyLogParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");
+    ViewBag.Title = "Daily Log";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "daily-log";
+}
+
+@using  (Html.BeginForm())
+{
+    <div class="report-params-center">
+        <h2>Log Date</h2>
+        <p><input class="dp" type="text" name="logDate" value="@Model.LogDate" /></p>
+    </div>
+    <div class="report-params-right">
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+    </div>
+    <div class="report-params-left"></div>
+}
+
+@section Filter {
+    <h3>Daily Log</h3>
+    <p>All invoices for the given log date will be pulled into the report.</p>
+}

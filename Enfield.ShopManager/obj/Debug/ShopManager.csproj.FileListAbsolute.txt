@@ -1,0 +1,13 @@
+C:\Projects\Enfield\ShopManager\ShopManager\bin\ShopManager.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\ShopManager.pdb
+C:\Projects\Enfield\ShopManager\ShopManager\bin\EntityFramework.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\EntityFramework.xml
+C:\Projects\Enfield\ShopManager\ShopManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Enfield\ShopManager\ShopManager\obj\Debug\ShopManager.dll
+C:\Projects\Enfield\ShopManager\ShopManager\obj\Debug\ShopManager.pdb
+C:\Projects\Enfield\ShopManager\ShopManager\bin\Castle.Core.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\Castle.Facilities.Logging.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\Castle.Facilities.WcfIntegration.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\Castle.Services.Logging.Log4netIntegration.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\Castle.Windsor.dll
+C:\Projects\Enfield\ShopManager\ShopManager\bin\log4net.dll

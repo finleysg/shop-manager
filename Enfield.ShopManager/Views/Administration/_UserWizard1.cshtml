@@ -1,0 +1,20 @@
+﻿@model Enfield.ShopManager.Models.UserModel
+
+@using (Html.BeginForm("UserDetail", "Administration", FormMethod.Post, new { @id = "user-wizard-form" }))
+{
+    <fieldset>
+        @Html.Hidden("wizardPage")
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+        @Html.LabelFor(m => m.Rate)
+        @Html.TextBoxFor(m => m.Rate)
+        @Html.HiddenFor(m => m.Email)
+        @Html.HiddenFor(m => m.RoleName)
+        @Html.HiddenFor(m => m.IsEmployed)
+        @Html.HiddenFor(m => m.IsLockedOut)
+    </fieldset>
+}

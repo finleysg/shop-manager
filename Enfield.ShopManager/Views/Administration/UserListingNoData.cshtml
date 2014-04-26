@@ -1,0 +1,21 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.UserListingModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "User Listing";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "user-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.UserList, page => Url.Action("UserAccess", Model.Filter.GenerateUserAccessRoute(page)), new AdminListRenderOptions())
+</div>
+
+<div class="admin-listing" style="height: 576px">
+    <p class="no-data">No users found using the current filter</p>
+</div>
+
+@section Filter {
+    @Html.Partial("_UserFilter", Model.Filter)
+}

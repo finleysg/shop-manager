@@ -1,0 +1,35 @@
+﻿@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.ServicesAndLaborModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Services and Labor";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "services-and-labor";
+}
+
+<div class="service-and-labor-tree">
+    <ul>
+        @foreach (var accountType in Model.AccountTypes)
+        {
+            <li class="account-type" 
+                data-id="@accountType.Id.ToString()" 
+                data-add-service-url="@Url.Action("AddServiceToAccountType")" 
+                data-edit-url="@Url.Action("UpdateAccountType")">@accountType.Description</li>
+            <li class="account-type-service-list">
+                @Html.Partial("_AccountTypeService", accountType.Services)
+            </li>
+        }
+    </ul>
+</div>
+@Html.Partial("_ServiceAndLaborDialogs")
+
+@section Filter {
+    <fieldset>
+        <p>
+            @Html.Label("account-type-id", "Account type:")
+            @Html.AutoChangeDropDownList("account-type-id", (List<SelectListItem>)ViewBag.AccountTypes, "ServicesAndLabor")
+        </p>
+    </fieldset>
+    <p>@Html.JqueryAjaxButton("add-service", "Create New Service", "plusthick", Url.Action("CreateServiceType"))</p>
+    <p>@Html.JqueryAjaxButton("add-labor", "Create New Labor", "plusthick", Url.Action("CreateLaborType"))</p>
+}

@@ -1,0 +1,17 @@
+﻿@model Enfield.ShopManager.Models.ShopFloorModel
+@using Enfield.ShopManager.Helpers
+           
+<div id="invoice-navigation">
+    <div class="invoice-navigation">
+        <h3>In Shop</h3>
+    </div>
+    @foreach (var vehicle in Model.VehiclesInShop) { 
+        @Html.VehicleDisplay(vehicle)
+    }
+    <div class="invoice-navigation">
+        <h3>Completed</h3>
+    </div>
+    @foreach (var vehicle in Model.VehiclesCompleted) { 
+        @Html.VehicleDisplay(vehicle)
+    }
+</div>

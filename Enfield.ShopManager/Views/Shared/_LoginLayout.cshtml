@@ -1,0 +1,38 @@
+﻿@{
+    Bundles.Reference("~/Content/Secure");
+    Bundles.Reference("~/Content/themes");
+    Bundles.Reference("~/Scripts/jQuery");
+    Bundles.Reference("~/Scripts/jQueryUi");
+    Bundles.Reference("~/Scripts/Common");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.CompanyName: @ViewBag.Title</title>
+    <meta name="section" content="@ViewBag.Section" />
+    <meta name="page" content="@ViewBag.Page" />
+    @Bundles.RenderStylesheets()
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>@ViewBag.CompanyName: Login</h1>
+        </div>
+        <div id="content">
+            <div id="content-main">@RenderBody()</div>
+            <div id="content-right">@RenderSection("Filter")</div>
+        </div>
+        <br class="clear" />
+        <div id="footer">
+            <p class="copyright">&copy; 2009 Enfield's Detail</p>
+        </div>
+        @Bundles.RenderScripts()
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var section = $('meta[name=section]').attr("content");
+                var page = $('meta[name=page]').attr("content");
+            });
+        </script>
+    </div>
+</body>
+</html>

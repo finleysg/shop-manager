@@ -1,0 +1,9 @@
+﻿@model List<Enfield.ShopManager.Models.HistoryModel>
+           
+<div id="history-detail" class="invoice-child-detail">
+    <h3>Stock Number History</h3>
+    @foreach (var history in Model)
+    {
+        <p>@string.Format("{0}: {1} ({2})", history.ModifyDate, history.Note, history.InvoiceId)</p>
+    }
+</div>

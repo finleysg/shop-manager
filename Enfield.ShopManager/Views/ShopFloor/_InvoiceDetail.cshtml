@@ -1,0 +1,41 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.InvoiceModel
+
+<div class="invoice-detail">
+    <fieldset>
+        <h3>Vehicle Detail</h3>
+        <p>
+            @Html.LabelFor(m => m.Id)
+            @Html.TextBoxFor(m => m.Id, new { @readonly = "readonly" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.ReceiveDate)
+            @Html.TextBoxFor(m => m.ReceiveDate, new { @readonly = "readonly" })
+        </p>
+        <p>
+            <a id="edit-account" class="float-right clear-right edit" data-url="@Url.Action("EditAccount")" href="#">change account</a>
+            @Html.LabelFor(m => m.AccountName, new { @class = "clear" })
+            @Html.TextBoxFor(m => m.AccountName, new { @readonly = "readonly", @size = 30 })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.StockNumber)
+            @Html.TextBoxFor(m => m.StockNumber, new { @class = "updateable" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Year)
+            @Html.TextBoxFor(m => m.Year, new { @class = "updateable" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Make)
+            @Html.TextBoxFor(m => m.Make, new { @class = "updateable" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Model)
+            @Html.TextBoxFor(m => m.Model, new { @class = "updateable" })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Color)
+            @Html.TextBoxFor(m => m.Color, new { @class = "updateable" })
+        </p>
+    </fieldset>
+</div>

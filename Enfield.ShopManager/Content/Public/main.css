@@ -1,0 +1,75 @@
+﻿/*
+    @reference "../Secure/reset.css";
+*/
+body {
+    text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 10;
+	padding: 0;
+    color: #efeabe;
+    background-image: url(../images/bg.gif);
+    font-size: 11px;
+}
+.container {
+    text-align: left;
+    margin: 30px auto;
+    width: 1024px;
+    min-height: 700px;
+    border: 5px solid #efeabe;
+}
+
+.header {
+	position: relative;
+	padding: 6px 0 0 0;
+}
+.header p { margin: 1em 0em 1em 3em; }
+.title-1 { font-size: 5em; font-weight: bold; color: #e7df9c; }
+.title-2
+{
+    font-size: 5em;
+    margin-left: .2em;
+    color: #efeabe;
+}
+.beauty-shot { border: 2px solid #efeabe; width: 944px; height: 180px; margin-left: 38px; background-color: Black; overflow: hidden; }
+.beauty-shot-image { display: block; margin: 0 auto; }
+
+.public-menu { margin-left: 38px; margin-top: 6px; font-size: 1.2em; }
+.public-menu li {
+    display: inline;
+    padding: 4px 8px 4px 8px;
+    margin-left: 4px;
+    background-color: #cc0000; 
+    font-weight: bold; 
+    -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px; -khtml-border-bottom-left-radius: 6px; border-bottom-left-radius: 6px; 
+    -moz-border-radius-bottomright: 6px; -webkit-border-bottom-right-radius: 6px; -khtml-border-bottom-right-radius: 6px; border-bottom-right-radius: 6px;
+}
+.public-menu li[data-selected|=True] {
+    color: #000000;
+}
+.public-menu li[data-selected|=False]:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.content { 
+    margin: 40px 40px 20px 38px;
+    width: 940px;
+    height: 220px;
+}
+.content h1 { font-size: 2em; margin-bottom: 1em; }
+.content p { font-size: 1.2em; margin-bottom: 1em; line-height: 1.4em; }
+.connect_widget_text { color: #cc0000; }
+.banner { float: right; font-size: 1.4em; background-color: #cc0000; padding: 8px 20px 8px 16px; margin: 0px -20px -20px 0px; }
+
+.footer { width: 100%; border-top: 4px solid #e7df9c; font-size: 1.2em; line-height: 1.4em; }
+.footer-find { float: left; margin: 20px 0px 0px 30px; }
+.footer-call { float: left; margin: 20px 0px 0px 60px; }
+.footer-facebook { float: left; margin: 20px 0px 0px 60px; }
+.copywrite { margin: 0px 30px 10px 0px; text-align: right; }
+
+.gallery-thumbs { margin-bottom: 2px; }
+.gallery-thumbs li { display: inline; margin: 1px; }
+.gallery-thumbs li img { height: 70px; width: 70px; border: .1em solid #efeabe }
+
+.google-map { float: left; }
+.contact-hours { float: left; font-size: 1.2em; margin-left: 20px; }

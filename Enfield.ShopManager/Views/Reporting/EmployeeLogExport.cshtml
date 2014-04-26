@@ -1,0 +1,34 @@
+﻿@model Enfield.ShopManager.Models.EmployeeLogReport
+@{
+    ViewBag.Title = "Employee Log";
+    Layout = "~/Views/Shared/_ExportLayout.cshtml";
+}
+
+<table id="data-table">
+    <tr>
+        <th>Location</th>
+        <th>Name</th>
+        <th class="detail-right">Sign In</th>
+        <th class="detail-right">Sign Out</th>
+        <th class="detail-right">Hours</th>
+    </tr>
+    @foreach (var day in Model.Employees)
+    {
+        <tr>
+            <td colspan="2">&nbsp</td>
+            <td colspan="2" class="detail-right"><b>@day.WorkDate</b></td>
+            <td>&nbsp</td>
+        </tr>
+        foreach (var e in day.EmployeeList)
+        {
+        <tr>
+            <td>@e.LocationName</td>
+            <td>@e.FullName</td>
+            <td class="detail-right">@e.FormattedSignInDate</td>
+            <td class="detail-right">@e.FormattedSignOutDate</td>
+            <td class="detail-right">@e.Hours</td>
+        </tr>
+        }
+        <tr><td colspan="5">&nbsp</td></tr>
+    }
+</table>

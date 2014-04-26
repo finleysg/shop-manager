@@ -1,0 +1,5 @@
+SELECT cs-uri-stem AS Url, sc-status AS Status, COUNT(*) AS Errors
+FROM u_ex*.log 
+WHERE (sc-status >= 400) 
+GROUP BY Url, Status 
+ORDER BY Errors DESC

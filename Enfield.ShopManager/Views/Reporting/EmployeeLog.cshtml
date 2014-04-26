@@ -1,0 +1,32 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.PayrollParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");
+    ViewBag.Title = "Employee Log";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "employee-log";
+}
+
+@using  (Html.BeginForm())
+{
+    <div class="report-params-center">
+        <h2>Start Date</h2>
+        <p><input class="dp" type="text" name="startDate" value="@Model.StartDate" /></p>
+        <h2>End Date</h2>
+        <p><input class="dp" type="text" name="endDate" value="@Model.EndDate" /></p>
+    </div>
+    <div class="report-params-right">
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+        <p>
+            @Html.RadioButton("reportType", "formatted", true) Formatted Report
+        </p>
+        <p>
+            @Html.RadioButton("reportType", "data-only") Data Only (for export)
+        </p>
+    </div>
+}
+
+@section Filter {
+    <h3>Employee Log</h3>
+    <p>All employees who have signed in with the start and end dates will be pulled into the report.</p>
+}

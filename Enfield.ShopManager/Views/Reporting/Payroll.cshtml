@@ -1,0 +1,45 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.PayrollParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");
+    ViewBag.Title = "Payroll";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "payroll";
+}
+
+@using  (Html.BeginForm())
+{
+    <div class="report-params-left">
+        <h2>Active Employees</h2>
+        @foreach (var employee in Model.ActiveEmployees)
+        {
+            <p>
+                <label for="selected-account" class="ui-widget-content">
+                    <input type="checkbox" name="selectedEmployees" value="@employee.Value" />@employee.Text
+                </label>
+            </p>
+        }
+    </div>
+    <div class="report-params-center">
+        <h2>Start Date</h2>
+        <p><input class="dp" type="text" name="startDate" value="@Model.StartDate" /></p>
+        <h2>End Date</h2>
+        <p><input class="dp" type="text" name="endDate" value="@Model.EndDate" /></p>
+    </div>
+    <div class="report-params-right">
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+        <p>
+            @Html.RadioButton("reportType", "formatted", true) Formatted Report
+        </p>
+        <p>
+            @Html.RadioButton("reportType", "data-only") Data Only (for export)
+        </p>
+    </div>
+}
+
+@section Filter {
+    <h3>Payroll Statements</h3>
+    <p>Employees listed all have access to the system (active employees).</p>
+    <p>To run all employees, you can leave them all unchecked, or check just those employees you want to add to the report.</p>
+    <p>All employees with labor totals greater than 0 will be pulled into the report.</p>
+}

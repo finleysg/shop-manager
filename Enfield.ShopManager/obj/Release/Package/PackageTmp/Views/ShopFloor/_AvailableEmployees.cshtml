@@ -1,0 +1,7 @@
+﻿@model List<Enfield.ShopManager.Models.EmployeeModel>
+
+@foreach (var employee in Model) {
+    <div class="working-employee task navigable ui-corner-all" data-id="@employee.Id.ToString()">
+        @employee.DisplayName
+    </div>
+}

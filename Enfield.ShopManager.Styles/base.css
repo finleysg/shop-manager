@@ -1,0 +1,81 @@
+﻿
+body {
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 1024px;
+}
+
+#header {
+	position: relative;
+	padding: 6px 0 0 0;
+	background: #cccccc;
+	color: #FFF;
+	border-bottom: 1px dotted #585858;
+}
+#header a {
+    float: right;
+    padding-right: 10px;
+    font-size: 80%;
+}
+#header p {
+    padding-left: 10px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+#header p span {
+    font-size: 18px;
+}
+
+#menu li {
+    display: inline;
+}
+#main-menu {
+    margin-bottom: 4px;
+}
+#main-menu li {
+    padding: 2px 8px 2px 8px;
+    background-color: Gray;
+}
+#main-menu li[state|=selected] {
+    padding: 2px 8px 3px 8px;
+    background-color: White;
+    color: Black;
+}
+#main-menu li[state|=unselected]:hover {
+    background-color: Silver;
+    cursor: pointer;
+}
+#sub-menu {
+    background-color: White;
+    border-top: 1px solid Gray;
+    color: Gray;
+    padding: 4px;
+}
+#sub-menu li {
+    padding: 4px;
+    font-size: 90%;
+}
+#sub-menu li[state|=selected] {
+    text-decoration: underline;
+    color: Black;
+}
+#sub-menu li[state|=unselected]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#content-main { 
+    float: left; 
+    width: 800px;
+    background-color: White;
+}
+#content-right { 
+    float: left; 
+    width: 224px;
+    min-height: 600px;
+    background-color: #dddddd;
+}
+.clear { clear: both; }

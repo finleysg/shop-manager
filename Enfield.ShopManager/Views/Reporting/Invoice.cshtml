@@ -1,0 +1,25 @@
+﻿@using Enfield.ShopManager.Helpers
+@model Enfield.ShopManager.Models.InvoiceParamModel
+@{
+    Bundles.Reference("~/Scripts/Reporting/reporting.js");
+    ViewBag.Title = "Invoice";
+    ViewBag.Section = "reporting";
+    ViewBag.Page = "invoice";
+}
+
+@using  (Html.BeginForm("InvoiceUrl", "Reporting"))
+{
+    <div class="report-params-right">
+        <h2>Invoice Number</h2>
+        <p><input type="text" name="invoiceId" value="@Model.InvoiceId" /></p>
+    </div>
+    <div class="report-params-center">
+        <p>@Html.JquerySubmitButton("Run Report", "script")</p>
+    </div>
+    <div class="report-params-left"></div>
+}
+
+@section Filter {
+    <h3>Invoice Report</h3>
+    <p>Prints an invoice report for the given invoice number.</p>
+}

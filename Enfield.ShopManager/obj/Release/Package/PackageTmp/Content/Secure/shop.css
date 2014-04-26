@@ -1,0 +1,237 @@
+﻿/*
+    @reference "base.css";
+*/
+.admin-listing {
+    width: 100%; 
+    height: 574px;
+    overflow: auto;
+    position: relative;
+}
+.shop-form {
+    height: 600px;
+}
+
+#invoice-navigation {
+    float: left;
+    width: 150px;
+    height: 600px;
+    position: relative;
+    overflow: auto;
+}
+.invoice-navigation {
+    padding: 2px 8px 2px 8px;
+    border: 1px solid #d8dcdf; 
+    background: #eeeeee url(../images/ui-bg_highlight-hard_100_eeeeee_1x100.png) 50% 50% repeat-x; 
+    font-weight: bold; 
+    color: #004276;
+}
+.invoice-navigation h3 {
+    font-size: 1.4em;
+}
+.invoice-admin-detail {
+    float: left;
+    width: 264px;
+    position: relative;
+}
+.invoice-adminchild-detail {
+    float: left;
+    width: 300px;
+    position: relative;
+    border: 1px solid #fcd3a1;
+	padding: 10px 10px;
+    margin: 24px 10px 0px 10px;
+}
+
+.invoice-detail {
+    float: left;
+    width: 264px;
+    position: relative;
+    margin-top: 10px;
+}
+.invoice-detail fieldset h3 {
+    color: #004276;
+    background-color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    margin: -18px 0px 14px;
+    padding: 0px 4px;
+}
+.invoice-child-detail {
+    float: left;
+    width: 300px;
+    position: relative;
+    border: 1px solid #fcd3a1;
+	padding: 10px 10px;
+    margin: 24px 10px 0px 10px;
+}
+.invoice-child-detail h3 {
+    color: #004276;
+    background-color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    margin-top: -18px;
+    padding: 0px 4px;
+}
+#service-detail {
+    margin-top: 34px;
+}
+.error-detail {
+    float: left;
+    color: Red;
+}
+.account-contact-detail {
+    float: left;
+    width: 300px;
+    position: relative;
+    border: 1px solid #fcd3a1;
+	padding: 10px 10px;
+    margin: 24px 10px 0px 10px;
+}
+
+.task-list {
+    height: 547px;
+    overflow: auto;
+}
+.task
+{
+    cursor: move;
+    padding: 4px 2px 4px 8px;
+    margin: 4px;
+    font-size: 1.1em;
+    color: #004276;
+}
+
+.no-data {
+    font-size: 1.1em;
+    margin-top: 200px;
+    text-align: center;
+}
+
+fieldset {
+	padding: 10px 10px;
+    margin: 24px 10px 10px 10px;
+	position :relative;
+    border: 1px solid #fcd3a1;
+	}
+	
+fieldset input,
+fieldset select {
+	margin-bottom: 8px;
+	vertical-align: top;
+	padding: 2px;
+	border: 1px solid #eeeeee;
+    color: #666666;
+	}
+
+fieldset label {
+	color: #333333;
+	font-size: 1em;
+	font-weight: bold;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+    clear: both;
+	}
+
+table 
+{
+	border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+	}
+table td,
+table th{
+	font-size: 1.1em;
+	padding-left: 8px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-right: 4px;
+    white-space: nowrap;
+	}
+
+table th{
+    padding-bottom: 4px;
+    padding-top: 4px;
+	text-align:left;
+	font-weight:bold;
+    color: #333333;
+	border-bottom: 2px solid #333333;
+	}
+	
+table tr.row-alternating td{
+	background:#e0e0e0;
+	}
+a.edit {
+    color: #004276;
+    text-decoration: none;
+}
+a.delete {
+    color: #cc0000;
+    text-decoration: none;
+}
+.rate {
+    text-align: right;
+    width: 100%;
+}
+.total {
+    font-weight: bold;
+    padding-top: 12px;
+}
+.note {
+    width: 100%;
+    padding-top: 8px;
+}
+
+.navigable
+{
+    border: 1px solid #cccccc; 
+    outline: none; 
+}
+.shop-vehicle
+{
+    padding: 4px 8px 0px 4px;
+    margin: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.shop-vehicle-number
+{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 2px;
+    line-height: 1.4em;
+}
+.shop-vehicle-description
+{
+    font-size: .8em;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    width: 100%;
+    opacity: .7; 
+    filter: Alpha(Opacity=70);
+}
+
+.account-detail {
+    float: left;
+    width: 264px;
+    position: relative;
+}
+.account-child-detail {
+    float: left;
+    width: 440px;
+    position: relative;
+    border: 1px solid #fcd3a1;
+	padding: 10px 10px;
+    margin: 24px 10px 0px 10px;
+}
+
+.report-params-left { float: left; margin: 20px; width: 300px; height: 560px; overflow: auto; }
+.report-params-left h2 { font-size: 1.2em; font-weight: bold; margin-bottom: 6px; white-space: nowrap }
+.report-params-center { float: left; margin: 20px; }
+.report-params-center h2 { font-size: 1.2em; font-weight: bold; margin-bottom: 6px; }
+.report-params-center p { margin-bottom: 8px; }
+.report-params-right { float: left; margin: 20px; }
+.report-params-right h2 { font-size: 1.2em; font-weight: bold; margin-bottom: 6px; }

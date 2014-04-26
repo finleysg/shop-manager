@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Projects\ShopManager\Enfield.ShopManager.Test\bin\Debug\Enfield.ShopManager.Tests.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-01-28" time="12:02:09">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5448" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0" machine-name="ISDEVL-G5173293" user="G517329" user-domain="GENMILLS" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Projects\ShopManager\Enfield.ShopManager.Test\bin\Debug\Enfield.ShopManager.Tests.dll" executed="True" result="Failure" success="False" time="8.781" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="Enfield" executed="True" result="Failure" success="False" time="8.767" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ShopManager" executed="True" result="Failure" success="False" time="8.767" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="8.767" asserts="0">
+                <results>
+                  <test-suite type="SetUpFixture" name="Services" executed="True" result="Failure" success="False" time="8.765" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="SecurityServiceTests" executed="True" result="Failure" success="False" time="2.303" asserts="0">
+                        <results>
+                          <test-case name="Enfield.ShopManager.Tests.Services.SecurityServiceTests.GetUserListing_Default_ReturnsAllUsers" executed="True" result="Failure" success="False" time="2.290" asserts="2">
+                            <failure>
+                              <message><![CDATA[  Expected: 34
+  But was:  14
+]]></message>
+                              <stack-trace><![CDATA[at Enfield.ShopManager.Tests.Services.SecurityServiceTests.GetUserListing_Default_ReturnsAllUsers() in C:\Projects\ShopManager\Enfield.ShopManager.Test\Services\SecurityServiceTests.cs:line 35
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

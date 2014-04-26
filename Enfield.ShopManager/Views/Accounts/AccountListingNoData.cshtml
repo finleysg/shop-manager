@@ -1,0 +1,21 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.AccountListingModel
+@{
+    Bundles.Reference("~/Scripts/Accounts");
+    ViewBag.Title = "Account Listing";
+    ViewBag.Section = "accounts";
+    ViewBag.Page = "account-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.AccountList, page => Url.Action("AccountListing", Model.Filter.GenerateAccountListingRoute(page)), new AdminListRenderOptions())
+</div>
+
+<div id="admin-listing">
+    <p class="no-data">No accounts found using the current filter</p>
+</div>
+
+@section Filter {
+    @Html.Partial("_AccountFilter", Model.Filter)
+}

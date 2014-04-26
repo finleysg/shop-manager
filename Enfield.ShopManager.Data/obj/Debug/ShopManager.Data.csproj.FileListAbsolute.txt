@@ -1,0 +1,5 @@
+C:\Projects\Enfield\ShopManager\ShopManager.Data\bin\Debug\ShopManager.Data.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Data\bin\Debug\ShopManager.Data.pdb
+C:\Projects\Enfield\ShopManager\ShopManager.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Enfield\ShopManager\ShopManager.Data\obj\Debug\ShopManager.Data.dll
+C:\Projects\Enfield\ShopManager\ShopManager.Data\obj\Debug\ShopManager.Data.pdb

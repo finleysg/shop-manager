@@ -1,0 +1,23 @@
+﻿@model Enfield.ShopManager.Models.SecurityLogFilterModel
+@using Enfield.ShopManager.Helpers
+
+@using (Html.BeginForm("SecurityLog", "Administration", FormMethod.Get, new { @id = "filter-form" }))
+{
+    <fieldset>
+        @Html.LabelFor(m => m.LoginDateStart)
+        @Html.EditorFor(m => m.LoginDateStart)
+        @Html.LabelFor(m => m.LoginDateEnd)
+        @Html.EditorFor(m => m.LoginDateEnd)
+        @Html.LabelFor(m => m.LocationId)
+        @Html.DropDownListFor(m => m.LocationId, (IEnumerable<SelectListItem>)ViewBag.Locations)
+        @Html.LabelFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName, new { @size = 30 })
+        @Html.LabelFor(m => m.ResultFlag)
+        @Html.DropDownListFor(m => m.ResultFlag, (SelectList)ViewBag.Result)
+        @Html.HiddenFor(m => m.Page)
+        @Html.HiddenFor(m => m.Size)
+    </fieldset>
+    <p>
+        @Html.JquerySubmitButton("Apply Filter", "check")
+    </p>
+}

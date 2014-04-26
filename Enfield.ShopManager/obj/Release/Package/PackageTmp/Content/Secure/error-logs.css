@@ -1,0 +1,7 @@
+﻿.log-view { width: 100%; height: 589px; overflow: auto; position: relative; margin-left: 1em; padding-top: 1em; }
+.log-entry { margin-bottom: .6em; }
+.log-files { margin-left: 2em; }
+.log-files a { text-decoration: none; color: #cc0000; }
+.log-file-list { margin: 1em; }
+.log-file-list li { margin-bottom: .4em; }
+.log-file-list a { text-decoration: none; color: #004276; }

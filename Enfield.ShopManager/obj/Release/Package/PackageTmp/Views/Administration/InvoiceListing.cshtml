@@ -1,0 +1,38 @@
+﻿@using PagedList.Mvc;
+@using Enfield.ShopManager.Helpers;
+@model Enfield.ShopManager.Models.InvoiceListingModel
+@{
+    Bundles.Reference("~/Scripts/Administration");
+    ViewBag.Title = "Invoice Listing";
+    ViewBag.Section = "administration";
+    ViewBag.Page = "invoice-listing";
+}
+
+<div class="pager-header">
+    @Html.PagedListPager(Model.InvoiceList, page => Url.Action("InvoiceListing", Model.Filter.GenerateInvoiceRoute(page)), new AdminListRenderOptions())
+    @if (ViewBag.Size != null)
+    {
+        <div class="pager-size">Show @Html.DropDownListFor(m => m.Filter.Size, (SelectList)ViewBag.Size) at a time</div>
+    }
+</div>
+
+@{
+var grid = new WebGrid(Model.InvoiceList, canSort: false, rowsPerPage: Model.Filter.Size);
+}
+<div class="admin-listing">
+    @grid.GetHtml(columns: grid.Columns(
+        grid.Column(format: (item) => Html.ActionLink((string)item.Id.ToString(), "InvoiceDetail", Model.Filter.GenerateInvoiceRoute((int)item.RowId, 1))),
+        grid.Column("LocationName", "Location"),
+        grid.Column("AccountName", "Account"),
+        grid.Column("ReceiveDate", "Received", @<text>@item.ReceiveDate.ToString("MM/dd/yyyy")</text>),
+        grid.Column("StockNumber", "Stock #"),
+        grid.Column("PurchaseOrderNumber", "PO #"),
+        grid.Column("Total", "Total", @<text>@item.Total.ToString("C")</text>),
+        grid.Column(header: "Paid?", format: (item) => Html.Raw("<input data-id='" + item.Id.ToString() + "' data-url='" + Url.Action("UpdateInvoicePaidStatus") + "' type='checkbox' " + ((item.IsPaid == true) ? "checked" : "") + " />"))
+    ))
+</div> 
+
+@section Filter {
+    @Html.Partial("_InvoiceFilter", Model.Filter)
+    <p>@Html.JqueryUiButton("Invoice Administration", "pencil", "InvoiceDetail", "Administration", Model.Filter.GenerateInvoiceRoute(1,1))</p>
+}

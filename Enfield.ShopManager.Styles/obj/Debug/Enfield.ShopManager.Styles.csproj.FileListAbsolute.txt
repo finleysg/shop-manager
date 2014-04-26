@@ -1,0 +1,15 @@
+C:\Projects\Enfield\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.dll
+C:\Projects\Enfield\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.pdb
+C:\Projects\Enfield\ShopManager\Enfield.ShopManager.Styles\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Enfield\ShopManager\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.dll
+C:\Projects\Enfield\ShopManager\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.pdb
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.dll
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.pdb
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.dll
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.pdb
+C:\Projects\ShopManager\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.csprojResolveAssemblyReference.cache
+C:\Projects\Enfield\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.dll
+C:\Projects\Enfield\Enfield.ShopManager.Styles\bin\Enfield.ShopManager.Styles.pdb
+C:\Projects\Enfield\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.csprojResolveAssemblyReference.cache
+C:\Projects\Enfield\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.dll
+C:\Projects\Enfield\Enfield.ShopManager.Styles\obj\Debug\Enfield.ShopManager.Styles.pdb

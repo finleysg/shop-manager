@@ -1,0 +1,12 @@
+﻿@model Enfield.ShopManager.Models.InvoiceReportModel
+
+<div class="report-header">
+    <div class="report-header-left"><h1>@Model.Header.CompanyName</h1></div>
+    <div class="report-header-right"><h2>Invoice</h2><h3 class="red">@Model.Invoice.Id.ToString()</h3></div>
+    <div class="report-divider"></div>
+    <p class="report-header-left">@Model.Header.Url</p>
+    <div class="report-divider"></div>
+    <p class="report-header-right">@Model.Header.Address</p>
+    <p class="report-header-left">@Model.Header.Phone</p>
+    <div class="report-divider"></div>
+</div>

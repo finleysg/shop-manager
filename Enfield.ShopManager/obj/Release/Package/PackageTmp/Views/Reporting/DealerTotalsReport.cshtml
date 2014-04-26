@@ -1,0 +1,47 @@
+﻿@model Enfield.ShopManager.Models.DealerTotalsReport
+@{
+    ViewBag.Title = "Dealer Totals";
+    Layout = "~/Views/Shared/_ReportLayout.cshtml";
+}
+
+@Html.Partial("_ReportHeader", Model.Header)
+<div class="report-body">
+    <div class="statement-date">
+        <p>Includes all invoices received from @Model.StartDate to @Model.EndDate</p>
+    </div>
+    <div class="report-detail">
+        <table>
+            <tr>
+                <th>Account</th>
+                <th>Date</th>
+                <th class="detail-right">Total</th>
+                <th class="detail-right">Cars</th>
+            </tr>
+            @foreach (var account in Model.Totals)
+            {
+                <tr>
+                    <td colspan="4"><b>@account.AccountName</b></td>
+                </tr>
+                foreach (var t in account.ServicesByDate)
+                {
+                <tr>
+                    <td></td>
+                    <td>@t.FormattedCompleteDate</td>
+                    <td class="detail-right">@t.FormattedTotal</td>
+                    <td class="detail-right">@t.Cars.ToString()</td>
+                </tr>
+                }
+                <tr>
+                    <td colspan="2"></td>
+                    <td class="report-detail-foot detail-right">@account.FormattedTotal</td>
+                    <td class="report-detail-foot detail-right">@account.FormattedCount</td>
+                </tr>
+            }
+            <tr>
+                <td colspan="2"></td>
+                <td class="report-detail-foot detail-right"><b>@Model.FormattedTotal</b></td>
+                <td class="report-detail-foot detail-right"><b>@Model.FormattedCount</b></td>
+            </tr>
+        </table>
+    </div>
+</div>

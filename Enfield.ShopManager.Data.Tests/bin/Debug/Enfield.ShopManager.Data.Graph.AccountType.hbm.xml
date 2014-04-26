@@ -1,0 +1,23 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="Enfield.ShopManager.Data.Graph.AccountType, Enfield.ShopManager.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`AccountType`">
+    <id name="AccountTypeId" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="AccountTypeId" />
+      <generator class="identity" />
+    </id>
+    <property name="Description" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Description" />
+    </property>
+    <property name="TaxRate" type="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="TaxRate" />
+    </property>
+    <property name="IsActive" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="IsActive" />
+    </property>
+    <property name="ModifyUser" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ModifyUser" />
+    </property>
+    <property name="ModifyDate" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ModifyDate" />
+    </property>
+  </class>
+</hibernate-mapping>
