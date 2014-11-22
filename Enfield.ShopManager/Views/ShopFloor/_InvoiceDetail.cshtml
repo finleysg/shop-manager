@@ -22,6 +22,10 @@
             @Html.TextBoxFor(m => m.StockNumber, new { @class = "updateable" })
         </p>
         <p>
+            @Html.LabelFor(m => m.VIN)
+            @Html.TextBoxFor(m => m.VIN, new { @class = "updateable", @size = 30 })
+        </p>
+        <p>
             @Html.LabelFor(m => m.Year)
             @Html.TextBoxFor(m => m.Year, new { @class = "updateable" })
         </p>

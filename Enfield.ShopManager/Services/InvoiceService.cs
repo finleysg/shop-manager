@@ -37,11 +37,6 @@ namespace Enfield.ShopManager.Services
             var invoices = InvoiceRepository.GetInvoices(new Data.Query.InvoiceQuery() { StockNumber = stockNumber });
             if (invoices == null || invoices.Count == 0) return null;
 
-            if (invoices.Count > 1)
-            {
-                //TODO: log warning
-            }
-
             return GetInvoice(invoices.First().Id);
         }
 

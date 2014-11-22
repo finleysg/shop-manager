@@ -20,7 +20,13 @@ namespace Enfield.ShopManager.Data.Graph
             set { stockNumber = (value == null) ? null : value.ToUpper(); }
         }
 
-        public virtual string VIN { get; set; }
+        private string vin;
+        public virtual string VIN 
+        {
+            get { return vin; }
+            set { vin = (value == null) ? null : value.ToUpper(); }
+        }
+
         public virtual string Year { get; set; }
 
         private string make;
