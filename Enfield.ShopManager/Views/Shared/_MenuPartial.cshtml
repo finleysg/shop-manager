@@ -1,6 +1,7 @@
 ﻿@model Enfield.ShopManager.Models.MenuModel
 @using Enfield.ShopManager.Helpers
 
+@if (Model != null && Model.MainMenu != null) {
 <div id="menu">
     <ul id="main-menu">
         @foreach (var item in Model.MainMenu.Where(m => m.IsVisible))
@@ -17,3 +18,4 @@
         </ul>
     </div>
 </div>
+}

@@ -36,18 +36,18 @@ namespace Enfield.ShopManager.Controllers
                 return View("Index_NoData", model);
             }
 
-            if (!string.IsNullOrEmpty(model.Invoice.StockNumber))
-                model.Invoice.History = InvoiceServices.GetStockNumberHistory(model.Invoice);
+            if (!string.IsNullOrEmpty(model.Invoice.VIN))
+                model.Invoice.History = InvoiceServices.GetVinHistory(model.Invoice);
 
             return View("Index", model);
         }
 
-        public ActionResult FindInvoice(string invoiceId, string stocknumber)
+        public ActionResult FindInvoice(string invoiceId, string vin)
         {
             int id;
             int.TryParse(invoiceId, out id);
 
-            ShopFloorModel model = CreateShopFloorModel(id, stocknumber);
+            ShopFloorModel model = CreateShopFloorModel(id, vin);
 
             ViewBag.ActiveEmployees = EmployeeServices.GetActiveEmployees();
             ViewBag.SignedInEmployees = InvoiceServices.GetSignedInEmployeeSelectList(base.LocationId);
@@ -57,13 +57,13 @@ namespace Enfield.ShopManager.Controllers
                 return View("Index_NoData", model);
             }
 
-            if (!string.IsNullOrEmpty(model.Invoice.StockNumber))
-                model.Invoice.History = InvoiceServices.GetStockNumberHistory(model.Invoice);
+            if (!string.IsNullOrEmpty(model.Invoice.VIN))
+                model.Invoice.History = InvoiceServices.GetVinHistory(model.Invoice);
 
             return View("Index", model);
         }
 
-        private ShopFloorModel CreateShopFloorModel(int id, string stocknumber)
+        private ShopFloorModel CreateShopFloorModel(int id, string vin)
         {
             ShopFloorModel model = new ShopFloorModel();
 
@@ -72,10 +72,10 @@ namespace Enfield.ShopManager.Controllers
                 model.Invoice = InvoiceServices.GetInvoice(id);
                 if (model.Invoice == null) model.NoDataMessage = string.Format("We could not find an invoice with an id = {0}", id);
             }
-            else if (!string.IsNullOrEmpty(stocknumber))
+            else if (!string.IsNullOrEmpty(vin))
             {
-                model.Invoice = InvoiceServices.GetInvoice(stocknumber);
-                if (model.Invoice == null) model.NoDataMessage = string.Format("We could not find an invoice with a stock number = {0}", stocknumber);
+                model.Invoice = InvoiceServices.GetInvoice(vin);
+                if (model.Invoice == null) model.NoDataMessage = string.Format("We could not find an invoice with a vin = {0}", vin);
             }
             else
             {
@@ -145,7 +145,6 @@ namespace Enfield.ShopManager.Controllers
         public ActionResult CompleteVehicle(int invoiceId)
         {
             var invoice = InvoiceServices.CompleteInvoice(invoiceId);
-            if (string.IsNullOrEmpty(invoice.StockNumber)) throw new InvalidOperationException("The stock number cannot be empty");
 
             NavigationServices.RemoveVehicleFromInShopList(base.LocationId, invoice);
             NavigationServices.AddVehicleToCompletedTodayList(base.LocationId, invoice);

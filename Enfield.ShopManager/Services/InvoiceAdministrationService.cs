@@ -75,9 +75,9 @@ namespace Enfield.ShopManager.Services
                 model.CurrentInvoice = Mapper.Map<Data.Graph.Invoice, InvoiceModel>(InvoiceRepository.GetInvoice(currentId));
                 model.Filter = filter;
 
-                if (!string.IsNullOrEmpty(model.CurrentInvoice.StockNumber))
+                if (!string.IsNullOrEmpty(model.CurrentInvoice.VIN))
                 {
-                    var history = InvoiceRepository.GetInvoiceHistory(model.CurrentInvoice.StockNumber);
+                    var history = InvoiceRepository.GetInvoiceHistory(model.CurrentInvoice.VIN);
                     model.CurrentInvoice.History = Mapper.Map<IList<Data.Graph.StockNumberHistory>, List<HistoryModel>>(history);
                 }
             }
@@ -90,6 +90,16 @@ namespace Enfield.ShopManager.Services
             var invoice = InvoiceRepository.GetInvoice(id);
             invoice.IsPaid = isPaid;
             InvoiceRepository.SaveInvoice(invoice);
+
+            if (!string.IsNullOrEmpty(invoice.VIN))
+            {
+                var history = new Data.Graph.StockNumberHistory();
+                history.InvoiceId = id;
+                history.StockNumber = invoice.VIN;
+                history.Note = "Invoice marked paid.";
+                InvoiceRepository.SaveHistory(history);
+            }
+
             Logger.InfoFormat("Updating invoice {0} to paid = {1}", id, isPaid);
 
             return Mapper.Map<Data.Graph.Invoice, Models.InvoiceModel>(invoice);

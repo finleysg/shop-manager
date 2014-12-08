@@ -19,10 +19,6 @@ function OpenDeleteInvoiceDialog(menuItem) {
     }
 }
 function OpenCompleteInvoiceDialog(menuItem) {
-    if ($("#StockNumber").val().length == 0) {
-        alert("We cannot complete the invoice with a missing stock number.");
-        return false;
-    }
     if (menuItem.attr("data-enabled")) {
         $("p.confirm").html("Are you sure invoice # " + $("#Id").val() + " should be completed?");
         $("#confirm-action-dialog").dialog("option", "buttons", {
@@ -82,10 +78,10 @@ function OpenSearchDialog(menuItem) {
     if (menuItem.attr("data-enabled")) {
         var searchUrl = menuItem.attr("data-url");
         $("#invoice-to-search").val("");
-        $("#stock-number-to-search").val("");
+        $("#vin-to-search").val("");
         $("#search-dialog").dialog("option", "buttons", {
             "Ok": function () {
-                window.location = searchUrl + "?invoiceId=" + $("#invoice-to-search").val() + "&stocknumber=" + $("#stock-number-to-search").val();
+                window.location = searchUrl + "?invoiceId=" + $("#invoice-to-search").val() + "&vin=" + $("#vin-to-search").val();
             },
             "Cancel": function () { $(this).dialog("close"); }
         });
@@ -93,8 +89,8 @@ function OpenSearchDialog(menuItem) {
     }
 }
 function OpenHistoryDialog(menuItem) {
-    if ($("#StockNumber").val().length == 0) {
-        alert("We must have a stock number to add notes or history.");
+    if ($("#VIN").val().length == 0) {
+        alert("We must have a VIN to add notes or history.");
         return false;
     }
     if (menuItem.attr("data-enabled")) {

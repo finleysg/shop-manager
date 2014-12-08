@@ -16,8 +16,8 @@ namespace Enfield.ShopManager.Models
         public string AccountName { get; set; }
 
         [Required]
-        [Display(Name = "Stock Number")]
-        public string StockNumber { get; set; }
+        [Display(Name = "VIN")]
+        public string VIN { get; set; }
 
         [Required]
         [StringLength(4, MinimumLength=4, ErrorMessage="The year must be exactly 4 digits")]

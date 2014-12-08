@@ -32,9 +32,9 @@ namespace Enfield.ShopManager.Services
             return Mapper.Map<Data.Graph.Invoice, InvoiceModel>(invoice);
         }
 
-        public InvoiceModel GetInvoice(string stockNumber)
+        public InvoiceModel GetInvoice(string vin)
         {
-            var invoices = InvoiceRepository.GetInvoices(new Data.Query.InvoiceQuery() { StockNumber = stockNumber });
+            var invoices = InvoiceRepository.GetInvoices(new Data.Query.InvoiceQuery() { VIN = vin });
             if (invoices == null || invoices.Count == 0) return null;
 
             return GetInvoice(invoices.First().Id);
@@ -59,7 +59,7 @@ namespace Enfield.ShopManager.Services
             inv.Make = invoice.Make;
             inv.Model = invoice.Model;
             inv.ReceiveDate = DateTime.Now;
-            inv.StockNumber = invoice.StockNumber;
+            inv.VIN = invoice.VIN;
             inv.Year = invoice.Year;
             inv.TaxRate = (decimal)account.AccountType.TaxRate;
 
@@ -79,11 +79,11 @@ namespace Enfield.ShopManager.Services
             InvoiceRepository.SaveInvoice(inv);
             Logger.InfoFormat("Completed invoice {0} at {1}", inv.Id, inv.Location.Name);
 
-            if (!string.IsNullOrEmpty(inv.StockNumber))
+            if (!string.IsNullOrEmpty(inv.VIN))
             {
                 var history = new Data.Graph.StockNumberHistory();
                 history.InvoiceId = invoiceId;
-                history.StockNumber = inv.StockNumber;
+                history.StockNumber = inv.VIN;
                 history.Note = "Invoice completed.";
                 InvoiceRepository.SaveHistory(history);
             }
@@ -100,11 +100,11 @@ namespace Enfield.ShopManager.Services
             InvoiceRepository.SaveInvoice(inv);
             Logger.InfoFormat("Recalled invoice {0} at {1}", inv.Id, inv.Location.Name);
 
-            if (!string.IsNullOrEmpty(inv.StockNumber))
+            if (!string.IsNullOrEmpty(inv.VIN))
             {
                 var history = new Data.Graph.StockNumberHistory();
                 history.InvoiceId = invoiceId;
-                history.StockNumber = inv.StockNumber;
+                history.StockNumber = inv.VIN;
                 history.Note = "Invoice recalled.";
                 InvoiceRepository.SaveHistory(history);
             }
@@ -376,9 +376,9 @@ namespace Enfield.ShopManager.Services
 
         #region | History |
 
-        public List<HistoryModel> GetStockNumberHistory(InvoiceModel invoice)
+        public List<HistoryModel> GetVinHistory(InvoiceModel invoice)
         {
-            var history = InvoiceRepository.GetInvoiceHistory(invoice.StockNumber);
+            var history = InvoiceRepository.GetInvoiceHistory(invoice.VIN);
             return Mapper.Map<IList<Data.Graph.StockNumberHistory>, List<HistoryModel>>(history);
         }
 
@@ -387,18 +387,18 @@ namespace Enfield.ShopManager.Services
             var invoice = InvoiceRepository.GetInvoice(invoiceId);
             if (invoice == null) throw new ArgumentException(string.Format("{0} is an invalid invoice number", invoiceId));
 
-            if (!string.IsNullOrEmpty(invoice.StockNumber))
+            if (!string.IsNullOrEmpty(invoice.VIN))
             {
                 var history = new Data.Graph.StockNumberHistory()
                 {
                     Note = note,
                     InvoiceId = invoice.Id,
-                    StockNumber = invoice.StockNumber
+                    StockNumber = invoice.VIN
                 };
                 InvoiceRepository.SaveHistory(history);
             }
 
-            var returnHistory = InvoiceRepository.GetInvoiceHistory(invoice.StockNumber);
+            var returnHistory = InvoiceRepository.GetInvoiceHistory(invoice.VIN);
 
             return Mapper.Map<IList<Data.Graph.StockNumberHistory>, List<HistoryModel>>(returnHistory);
         }

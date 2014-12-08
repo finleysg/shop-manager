@@ -36,6 +36,7 @@ namespace Enfield.ShopManager.Data.Repository
             if (query.CompletedDateStart.HasValue) criteria.Add(Expression.Ge("CompleteDate", query.CompletedDateStart.Value));
             if (query.CompletedDateEnd.HasValue) criteria.Add(Expression.Le("CompleteDate", query.CompletedDateEnd.Value));
             if (!string.IsNullOrEmpty(query.StockNumber)) criteria.Add(Expression.Like("StockNumber", query.StockNumber + "%"));
+            if (!string.IsNullOrEmpty(query.VIN)) criteria.Add(Expression.Like("VIN", "%" + query.VIN + "%"));
             if (query.HadBeenCompleted.HasValue) criteria.Add(Expression.Eq("IsComplete", query.HadBeenCompleted.Value));
             if (query.HasBeenPaid.HasValue) criteria.Add(Expression.Eq("IsPaid", query.HasBeenPaid.Value));
             if (query.ExcludeZeroTotal) criteria.Add(Expression.Gt("Total", decimal.Parse("0.0")));
@@ -48,10 +49,10 @@ namespace Enfield.ShopManager.Data.Repository
             return criteria;
         }
 
-        public IList<StockNumberHistory> GetInvoiceHistory(string stockNumber)
+        public IList<StockNumberHistory> GetInvoiceHistory(string vin)
         {
             var criteria = Session.CreateCriteria<StockNumberHistory>();
-            criteria.Add(Expression.Eq("StockNumber", stockNumber));
+            criteria.Add(Expression.Eq("StockNumber", vin));
             criteria.AddOrder(new Order("ModifyDate", true));
 
             return criteria.List<StockNumberHistory>();

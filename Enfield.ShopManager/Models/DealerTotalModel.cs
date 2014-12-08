@@ -7,6 +7,7 @@ namespace Enfield.ShopManager.Models
 {
     public class DealerTotalModel
     {
+        public string LocationName { get; set; }
         public string AccountName { get; set; }
         public List<ServiceTotalViewModel> ServicesByDate { get; set; }
 

@@ -43,6 +43,7 @@ namespace Enfield.ShopManager.Data.Repository
             if (locationId.HasValue) criteria.Add(Expression.Eq("LocationId", locationId.Value));
 
             criteria.AddOrder(new Order("AccountName", true));
+            criteria.AddOrder(new Order("CompleteDate", true));
 
             return criteria.List<ServiceTotalsView>();
         }
