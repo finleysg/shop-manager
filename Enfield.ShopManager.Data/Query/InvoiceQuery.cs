@@ -16,6 +16,7 @@ namespace Enfield.ShopManager.Data.Query
         public DateTime? CompletedDateStart { get; set; }
         public DateTime? CompletedDateEnd { get; set; }
         public string StockNumber { get; set; }
+        public string VIN { get; set; }
         public bool ExcludeZeroTotal { get; set; }
     }
 }

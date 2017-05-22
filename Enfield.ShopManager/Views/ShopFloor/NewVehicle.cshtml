@@ -20,9 +20,9 @@
                     @Html.HiddenFor(m => m.AccountTypeId)
                 </p>
                 <p>
-                    @Html.LabelFor(m => m.StockNumber)
-                    @Html.TextBoxFor(m => m.StockNumber)
-                    @Html.ValidationMessageFor(m => m.StockNumber)
+                    @Html.LabelFor(m => m.VIN)
+                    @Html.TextBoxFor(m => m.VIN)
+                    @Html.ValidationMessageFor(m => m.VIN)
                 </p>
                 <p>
                     @Html.LabelFor(m => m.Year)
@@ -66,6 +66,6 @@
 @section Filter {
     <h3>Adding a New Invoice</h3>
     <p>The new invoice number will be created when the invoice is saved.</p>
-    <p>Enter the first 8 digits in the VIN for the stock number.</p>
-    <p>We need a stock number in order to track history. If there is no stock number, then notes/history will be disabled.</p>
+    <p>Enter the last 8 digits in the VIN.</p>
+    <p>We need a vin in order to track history. If there is no vin, then notes/history will be disabled.</p>
 }

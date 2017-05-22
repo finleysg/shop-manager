@@ -11,7 +11,7 @@
         @Html.LabelFor(m => m.LocationId)
         @Html.DropDownListFor(m => m.LocationId, (IEnumerable<SelectListItem>)ViewBag.Locations)
         @Html.LabelFor(m => m.AccountName)
-        @Html.TextBoxFor(m => m.AccountName, new { @size = 30 })
+        @Html.TextBoxFor(m => m.AccountName, new { @size = 26 })
         @Html.LabelFor(m => m.HasBeenPaid)
         @Html.DropDownListFor(m => m.HasBeenPaid, (SelectList)ViewBag.Paid)
         @Html.LabelFor(m => m.ExcludeZeroTotal)

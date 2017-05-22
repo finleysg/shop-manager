@@ -1,0 +1,34 @@
+2014-11-22 16:11:41,387 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-11-22 16:11:41,424 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:11:41,450 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-11-22 16:11:41,454 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:11:41,494 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:11:47,719 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:11:55,190 INFO  Enfield.ShopManager.Controllers.AccountsController: Local development - not using a secure cookie
+2014-11-22 16:11:55,723 INFO  Enfield.ShopManager.Controllers.AccountsController: Local development - not using a secure cookie
+2014-11-22 16:12:17,134 INFO  Enfield.ShopManager.Services.InvoiceService: Created new invoice 381575 for TEST DEALER ACCOUNT at location id 1
+2014-11-22 16:12:17,142 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-11-22 16:12:17,154 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:12:17,234 INFO  Enfield.ShopManager.Services.InvoiceService: Reloading available labor from database
+2014-11-22 16:12:17,248 INFO  Enfield.ShopManager.Services.InvoiceService: Reloading available services from database
+2014-11-22 16:12:17,262 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:12:17,301 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:13:31,122 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:13:31,146 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:16:26,433 INFO  Enfield.ShopManager.Services.InvoiceService: Updated VIN field to 1234567890987654321 on invoice 381575 at MAIN SHOP
+2014-11-22 16:16:26,462 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:16:38,957 INFO  Enfield.ShopManager.Services.InvoiceService: Added service type id 3 to invoice 381575
+2014-11-22 16:16:39,002 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:16:39,027 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:16:39,048 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:16:43,984 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:16:43,992 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:39:21,128 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading invoice navigation from database for location 1
+2014-11-22 16:39:21,153 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:39:21,194 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:39:28,071 INFO  Enfield.ShopManager.Services.InvoiceService: Reloading available labor from database
+2014-11-22 16:39:28,094 INFO  Enfield.ShopManager.Services.InvoiceService: Reloading available services from database
+2014-11-22 16:39:28,101 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:39:28,115 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie
+2014-11-22 16:40:16,514 INFO  Enfield.ShopManager.Services.InvoiceNavigationService: Loading completed vehicles from database for location 1
+2014-11-22 16:40:16,521 INFO  Enfield.ShopManager.Controllers.ShopFloorController: Local development - not using a secure cookie

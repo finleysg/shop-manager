@@ -25,6 +25,7 @@ var grid = new WebGrid(Model.InvoiceList, canSort: false, rowsPerPage: Model.Fil
         grid.Column("LocationName", "Location"),
         grid.Column("AccountName", "Account"),
         grid.Column("ReceiveDate", "Received", @<text>@item.ReceiveDate.ToString("MM/dd/yyyy")</text>),
+        grid.Column("VIN", "VIN"),
         grid.Column("StockNumber", "Stock #"),
         grid.Column("PurchaseOrderNumber", "PO #"),
         grid.Column("Total", "Total", @<text>@item.Total.ToString("C")</text>),

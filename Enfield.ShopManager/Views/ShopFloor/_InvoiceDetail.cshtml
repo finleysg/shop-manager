@@ -15,7 +15,11 @@
         <p>
             <a id="edit-account" class="float-right clear-right edit" data-url="@Url.Action("EditAccount")" href="#">change account</a>
             @Html.LabelFor(m => m.AccountName, new { @class = "clear" })
-            @Html.TextBoxFor(m => m.AccountName, new { @readonly = "readonly", @size = 30 })
+            @Html.TextBoxFor(m => m.AccountName, new { @readonly = "readonly", @size = 26 })
+        </p>
+        <p>
+            @Html.LabelFor(m => m.VIN)
+            @Html.TextBoxFor(m => m.VIN, new { @readonly = "readonly" })
         </p>
         <p>
             @Html.LabelFor(m => m.StockNumber)

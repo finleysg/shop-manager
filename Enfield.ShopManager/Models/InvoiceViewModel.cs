@@ -27,6 +27,9 @@ namespace Enfield.ShopManager.Models
         [Display(Name = "Account")]
         public string AccountName { get; set; }
 
+        [Display(Name = "VIN")]
+        public string VIN { get; set; }
+
         [Display(Name = "Stock Number")]
         public string StockNumber { get; set; }
 

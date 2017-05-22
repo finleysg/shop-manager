@@ -12,6 +12,8 @@ namespace Enfield.ShopManager.Services
 {
     public class ReportService : DomainServiceBase
     {
+        public LocationService LocationServices { get; set; }
+
         public List<DailyLogModel> GetDailyLog(DateTime logDate, string role, int locationId)
         {
             int? locationFilter = null;
@@ -70,14 +72,16 @@ namespace Enfield.ShopManager.Services
             int? locationFilter = null;
             if (role.Equals("Manager", StringComparison.InvariantCultureIgnoreCase)) locationFilter = locationId;
 
-            var reportData = ReportRepository.GetServiceTotals(startDate, endDate, locationFilter).GroupBy(t => t.AccountName);
+            var reportData1 = ReportRepository.GetServiceTotals(startDate, endDate, locationFilter).Distinct();
+            var reportData = reportData1.GroupBy(t => new { t.LocationId, t.AccountName });
 
             List<DealerTotalModel> report = new List<DealerTotalModel>();
-            foreach (IGrouping<string, ServiceTotalsView> total in reportData)
+            foreach (var total in reportData)
             {
+                var location = LocationServices.GetLocation(total.Key.LocationId);
                 report.Add(new DealerTotalModel()
                 {
-                    AccountName = total.Key,
+                    AccountName = string.Format("{0} ({1})", total.Key.AccountName, location.Name),
                     ServicesByDate = Mapper.Map<IList<Data.Graph.ServiceTotalsView>, List<ServiceTotalViewModel>>(total.ToList())
                 });
             }

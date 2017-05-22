@@ -55,6 +55,5 @@ C:\Projects\Enfield\Enfield.ShopManager.Data\bin\Debug\Castle.Windsor.xml
 C:\Projects\Enfield\Enfield.ShopManager.Data\bin\Debug\FluentNHibernate.pdb
 C:\Projects\Enfield\Enfield.ShopManager.Data\bin\Debug\Iesi.Collections.pdb
 C:\Projects\Enfield\Enfield.ShopManager.Data\bin\Debug\NHibernate.ByteCode.Castle.xml
-C:\Projects\Enfield\Enfield.ShopManager.Data\obj\Debug\Enfield.ShopManager.Data.csprojResolveAssemblyReference.cache
 C:\Projects\Enfield\Enfield.ShopManager.Data\obj\Debug\Enfield.ShopManager.Data.dll
 C:\Projects\Enfield\Enfield.ShopManager.Data\obj\Debug\Enfield.ShopManager.Data.pdb

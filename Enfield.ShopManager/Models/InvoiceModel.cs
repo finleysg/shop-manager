@@ -39,6 +39,9 @@ namespace Enfield.ShopManager.Models
         [Display(Name = "Stock Number")]
         public string StockNumber { get; set; }
 
+        [Display(Name = "VIN")]
+        public string VIN { get; set; }
+
         [Required]
         [Display(Name = "Year")]
         public string Year { get; set; }

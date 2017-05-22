@@ -14,6 +14,7 @@ namespace Enfield.ShopManager.Data.Graph
         public virtual string AccountName { get; set; }
         public virtual DateTime ReceiveDate { get; set; }
         public virtual DateTime? CompleteDate { get; set; }
+        public virtual string VIN { get; set; }
         public virtual string StockNumber { get; set; }
         public virtual string Year { get; set; }
         public virtual string Make { get; set; }
